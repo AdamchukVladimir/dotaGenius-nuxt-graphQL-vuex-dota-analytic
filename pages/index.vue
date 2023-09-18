@@ -1,8 +1,10 @@
 <template>
   <div>
     TEEEST
-    {{ todos }}
-    {{ live }}
+
+    <li v-for="match in matchesState" :key="match.matchId">
+      {{ match.matchId }}
+    </li>
   </div>
 </template>
 
@@ -19,7 +21,7 @@ export default {
     live: {
       prefetch: true,
       query: live,
-      pollInterval: 20000,
+      pollInterval: 60000,
     },
   },
   data() {
@@ -39,12 +41,19 @@ export default {
 
   methods: {
     startRefetchInterval() {
+      //Получаем данные при вызове (Нужно для первичного захода в mount)
+      this.$apollo.query({ query: live }).then((data) => {
+        console.log(data)
+        this.$store.commit('matchesStore/updateMatches', data)
+      })
+      //Вешает Интервал, чтобы кидать запрос каждые 60 сек
       this.refetchInterval = setInterval(() => {
         console.log('Refetching')
         this.$apollo.query({ query: live }).then((data) => {
           console.log(data)
+          this.$store.commit('matchesStore/updateMatches', data)
         })
-      }, 20000)
+      }, 60000)
     },
 
     stopRefetchInterval() {
@@ -52,8 +61,8 @@ export default {
     },
   },
   computed: {
-    todos() {
-      return this.$store.state.matchesStore.matches[0]
+    matchesState() {
+      return this.$store.state.matchesStore.matches
     },
   },
 }

@@ -7,22 +7,23 @@ export const state = () => ({
 })
 
 export const getters = {
-  getCounter(state) {
-    return state.counter
-  },
+  // getCounter(state) {
+  //   return state.counter
+  // },
 }
 
 export const mutations = {
-  increment(state) {
-    state.counter++
+  updateMatches(state, MatchesObj) {
+    state.matches = MatchesObj.data.live.matches
+    console.log('state.matches = ' + state.matches)
   },
 }
 
 export const actions = {
-  async fetchCounter({ state }) {
-    // make request
-    const res = { data: 10 }
-    state.counter = res.data
-    return res.data
-  },
+  // async fetchCounter({ state }) {
+  //   // make request
+  //   const res = { data: 10 }
+  //   state.counter = res.data
+  //   return res.data
+  // },
 }

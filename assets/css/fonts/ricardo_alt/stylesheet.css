@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-ExtraLightItalic.eot');
+    src: local('Ricardo ALT ExtraLight Italic'), local('RicardoALT-ExtraLightItalic'),
+        url('RicardoALT-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-ExtraLightItalic.woff2') format('woff2'),
+        url('RicardoALT-ExtraLightItalic.woff') format('woff'),
+        url('RicardoALT-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-Light.eot');
+    src: local('Ricardo ALT Light'), local('RicardoALT-Light'),
+        url('RicardoALT-Light.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-Light.woff2') format('woff2'),
+        url('RicardoALT-Light.woff') format('woff'),
+        url('RicardoALT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-BoldItalic.eot');
+    src: local('Ricardo ALT Bold Italic'), local('RicardoALT-BoldItalic'),
+        url('RicardoALT-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-BoldItalic.woff2') format('woff2'),
+        url('RicardoALT-BoldItalic.woff') format('woff'),
+        url('RicardoALT-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-Bold.eot');
+    src: local('Ricardo ALT Bold'), local('RicardoALT-Bold'),
+        url('RicardoALT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-Bold.woff2') format('woff2'),
+        url('RicardoALT-Bold.woff') format('woff'),
+        url('RicardoALT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-ExtraBoldItalic.eot');
+    src: local('Ricardo ALT ExtraBold Italic'), local('RicardoALT-ExtraBoldItalic'),
+        url('RicardoALT-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-ExtraBoldItalic.woff2') format('woff2'),
+        url('RicardoALT-ExtraBoldItalic.woff') format('woff'),
+        url('RicardoALT-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-ExtraLight.eot');
+    src: local('Ricardo ALT ExtraLight'), local('RicardoALT-ExtraLight'),
+        url('RicardoALT-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-ExtraLight.woff2') format('woff2'),
+        url('RicardoALT-ExtraLight.woff') format('woff'),
+        url('RicardoALT-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-ExtraBold.eot');
+    src: local('Ricardo ALT ExtraBold'), local('RicardoALT-ExtraBold'),
+        url('RicardoALT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-ExtraBold.woff2') format('woff2'),
+        url('RicardoALT-ExtraBold.woff') format('woff'),
+        url('RicardoALT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-MediumItalic.eot');
+    src: local('Ricardo ALT Medium Italic'), local('RicardoALT-MediumItalic'),
+        url('RicardoALT-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-MediumItalic.woff2') format('woff2'),
+        url('RicardoALT-MediumItalic.woff') format('woff'),
+        url('RicardoALT-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-Regular.eot');
+    src: local('Ricardo ALT Regular'), local('RicardoALT-Regular'),
+        url('RicardoALT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-Regular.woff2') format('woff2'),
+        url('RicardoALT-Regular.woff') format('woff'),
+        url('RicardoALT-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-SemiBoldItalic.eot');
+    src: local('Ricardo ALT SemiBold Italic'), local('RicardoALT-SemiBoldItalic'),
+        url('RicardoALT-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-SemiBoldItalic.woff2') format('woff2'),
+        url('RicardoALT-SemiBoldItalic.woff') format('woff'),
+        url('RicardoALT-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-LightItalic.eot');
+    src: local('Ricardo ALT Light Italic'), local('RicardoALT-LightItalic'),
+        url('RicardoALT-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-LightItalic.woff2') format('woff2'),
+        url('RicardoALT-LightItalic.woff') format('woff'),
+        url('RicardoALT-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-Medium.eot');
+    src: local('Ricardo ALT Medium'), local('RicardoALT-Medium'),
+        url('RicardoALT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-Medium.woff2') format('woff2'),
+        url('RicardoALT-Medium.woff') format('woff'),
+        url('RicardoALT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-RegularItalic.eot');
+    src: local('Ricardo ALT Regular Italic'), local('RicardoALT-RegularItalic'),
+        url('RicardoALT-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-RegularItalic.woff2') format('woff2'),
+        url('RicardoALT-RegularItalic.woff') format('woff'),
+        url('RicardoALT-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ricardo ALT';
+    src: url('RicardoALT-SemiBold.eot');
+    src: local('Ricardo ALT SemiBold'), local('RicardoALT-SemiBold'),
+        url('RicardoALT-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('RicardoALT-SemiBold.woff2') format('woff2'),
+        url('RicardoALT-SemiBold.woff') format('woff'),
+        url('RicardoALT-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

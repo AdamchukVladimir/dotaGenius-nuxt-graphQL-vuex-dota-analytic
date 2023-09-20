@@ -1,16 +1,26 @@
 <template>
-  <div>
+  <div class="matches">
     TEEEST
 
     <li v-for="match in matchesState" :key="match.matchId">
       {{ match.matchId }}
+      <matchSummary :match="match" />
     </li>
   </div>
 </template>
 
+<style>
+.matches {
+  display: grid;
+  justify-content: center;
+
+  background-color: rgb(31, 31, 31);
+}
+</style>
 <script>
 //import VueCookies from 'vue-cookies'
 //import { useSubscription } from '@nuxtjs/apollo'
+import matchSummary from '@/components/matchSummary.vue'
 import constants from '~/api/apollo/queries/constants'
 import live from '~/api/apollo/queries/live'
 import gql from 'graphql-tag'

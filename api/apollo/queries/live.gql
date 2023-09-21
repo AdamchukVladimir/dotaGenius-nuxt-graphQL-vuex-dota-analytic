@@ -4,7 +4,7 @@
       request: {
         skip: 0
         take: 1000
-        # tiers: [
+        #tiers: [
         #   PROFESSIONAL
         #   AMATEUR
         #   MINOR
@@ -52,6 +52,9 @@
         position
         numLastHits
         networth
+        numKills
+        numDeaths
+        numAssists
         steamAccount {
           profileUri
           avatar
@@ -63,6 +66,13 @@
             isPro
             roles
             signatureHeroes
+            team {
+              name
+              tag
+              logo
+              winCount
+              lossCount
+            }
           }
         }
       }

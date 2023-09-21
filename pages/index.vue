@@ -1,9 +1,6 @@
 <template>
   <div class="matches">
-    TEEEST
-
     <li v-for="match in matchesState" :key="match.matchId">
-      {{ match.matchId }}
       <matchSummary :match="match" />
     </li>
   </div>
@@ -15,6 +12,10 @@
   justify-content: center;
 
   background-color: rgb(31, 31, 31);
+}
+li {
+  list-style-type: none;
+  margin-bottom: 20px;
 }
 </style>
 <script>

@@ -22,7 +22,7 @@
         />
         {{ formatDelayTime }}
       </div>
-      <div class="radiantBlock">
+      <div class="radiantHeroes">
         <div v-for="player in match.players">
           <div class="radiant hero" v-if="player.isRadiant == true">
             <span class="player_basic">
@@ -43,15 +43,24 @@
               <template v-else>
                 {{ player.steamAccount.name }}
               </template>
+              <span class="KDA">
+                _KDA {{ player.numKills }} / {{ player.numDeaths }} /
+                {{ player.numAssists }}
+              </span>
+              <span class="networth"> _networth {{ player.networth }} </span>
             </span>
-            <span class="KDA">
-              {{ player.numKills }} / {{ player.numDeaths }} /
-              {{ player.numAssists }}
+            <span class="player_avg">
+              <template v-if="player.steamAccount.proSteamAccount">
+                signHeroes{{
+                  player.steamAccount.proSteamAccount.signatureHeroes
+                }}
+              </template>
+              player.avg.winrate hero.avg.winrate
             </span>
           </div>
         </div>
       </div>
-      <div class="direBlock">
+      <div class="direHeroes">
         <div v-for="player in match.players">
           <div class="dire hero" v-if="player.isRadiant == false">
             <span class="player_basic">
@@ -74,11 +83,53 @@
               </template>
             </span>
             <span class="KDA">
-              {{ player.numKills }} / {{ player.numDeaths }} /
-              {{ player.numAssists }}
+                _KDA {{ player.numKills }} / {{ player.numDeaths }} /
+                {{ player.numAssists }}
+              </span>
+              <span class="networth"> _networth {{ player.networth }} </span>
+            </span>
+            <span class="player_avg">
+              <template v-if="player.steamAccount.proSteamAccount">
+                signHeroes{{
+                  player.steamAccount.proSteamAccount.signatureHeroes
+                }}
+              </template>
+              player.avg.winrate hero.avg.winrate
             </span>
           </div>
         </div>
+      </div>
+      <div class="teamsSummary">
+        <span class="radiant_team">
+           <img
+                  class="teamLogo icon"
+                  src={this.props.match.radiantTeam.logo}
+                  alt="Radiant logo"
+                />
+          match.avg.teams.radiantTeam.total_winrate 
+          match.avg.teams.radiantTeam.winrateVersus
+          match.avg.teams.radiantTeam.winrateWidthHeroes[array]
+          match.avg.teams.radiantTeam.winrateVersusHeroes[array]
+           
+        </span>
+        <span class="insight">
+          Win Probability 
+          "Side winrate"
+
+          coefficient
+        </span>
+        <span class="dire_team">
+          <img
+                  class="teamLogo icon"
+                  src={this.props.match.direTeam.logo}
+                  alt="Dire logo"
+                />
+          match.avg.teams.direTeam.total_winrate 
+          match.avg.teams.direTeam.winrateVersus
+          match.avg.teams.direTeam.winrateWidthHeroes[array]
+          match.avg.teams.direTeam.winrateVersusHeroes[array]
+           
+        </span>
       </div>
     </div>
   </div>
@@ -90,15 +141,15 @@
   align-items: center;
   white-space: nowrap;
 }
-.radiantBlock {
-  grid-area: radiantBlock;
+.radiantHeroes {
+  grid-area: radiantHeroes;
   background-color: gray;
   display: flex;
   flex-direction: column;
 }
 
-.direBlock {
-  grid-area: direBlock;
+.direHeroes {
+  grid-area: direHeroes;
   background-color: rgb(59, 59, 59);
   display: flex;
   flex-direction: column;
@@ -119,15 +170,23 @@
   align-items: center;
 }
 
+.teamsSummary{
+  grid-area: teamsSummary;
+  background-color: rgb(89, 92, 92);
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 .match {
   display: grid;
   margin-left: auto;
   margin-right: auto;
   grid-gap: 20px 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-template-areas:
-    'matchInfoLeft matchInfoRight'
-    'radiantBlock direBlock';
+    'matchInfoLeft matchInfoLeft matchInfoRight'
+    'radiantHeroes teamsSummary direHeroes';
   background-color: black;
 }
 

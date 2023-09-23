@@ -1,12 +1,15 @@
+/*
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url('./fonts/ricardo_alt/stylesheet.css');
 html, body {
     background-color: #0C0C0D; /* Замените на нужный вам цвет фона или стиль */
+    /*
     color: #E4E4E7;
     
-    font-family: 'RicardoALT-Bold', Ricardo ALT;
     font-family: "Montserrat", sans-serif;
     font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'RicardoALT-Bold', Ricardo ALT;
+    
   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -14,3 +17,4 @@ html, body {
   
 
   }  
+  */

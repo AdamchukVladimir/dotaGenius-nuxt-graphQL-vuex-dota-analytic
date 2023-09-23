@@ -1,38 +1,53 @@
 <template>
   <div>
-    <div class="match">
-      <div class="matchInfoLeft">
-        <img
-          class="clock icon"
-          src="~/assets/icons/clock.png"
-          alt="Clock icon"
-        />
-        {{ formatGameTime }}
-        ID: {{ match.matchId }}
-        <template v-if="match.averageRank">
-          Average MMR:
-          {{ match.averageRank }}
-        </template>
+    <div class="match tile is-ancestor">
+      <div class="matchInfoLeft tile is-2 is-parent">
+        <div class="tile is-child box">
+          <div class="tile">
+            <span class="icon">
+              <font-awesome-icon icon="fa-solid fa-clock" />
+            </span>
+            {{ formatGameTime }}
+          </div>
+        </div>
       </div>
-      <div class="matchInfoRight">
-        <img
-          class="delay icon"
-          src="~/assets/icons/delay.png"
-          alt="Delay icon"
-        />
-        {{ formatDelayTime }}
+      <div class="matchID tile is-2 is-parent">
+        <div class="tile is-child box">
+          <div class="tile">ID: {{ match.matchId }}</div>
+        </div>
       </div>
-      <div class="radiantHeroes">
+      <div class="avarageMMR tile is-4 is-parent">
+        <div class="tile is-child box">
+          <template v-if="match.averageRank">
+            <div class="tile">Average Rank: {{ match.averageRank }}MMR</div>
+          </template>
+          <template v-else-if="match.league">
+            <div class="tile">{{ match.league.name }}</div>
+          </template>
+        </div>
+      </div>
+      <div class="matchInfoRight tile is-2 is-parent">
+        <div class="tile is-child box">
+          <span class="icon">
+            <font-awesome-icon icon="fa-solid fa-hourglass-end" />
+          </span>
+          {{ formatDelayTime }}
+        </div>
+      </div>
+    </div>
+    <div class="matchInfoTotal tile is-ancestor box">
+      <div class="radiantHeroes tile is-3 is-parent is-vertical box">
         <div v-for="player in match.players">
-          <div class="radiant hero" v-if="player.isRadiant == true">
+          <div
+            class="radiant hero tile is-child box"
+            v-if="player.isRadiant == true"
+          >
             <span class="player_basic">
               {{ player.heroId }}
               <template v-if="player.steamAccount.proSteamAccount">
-                <img
-                  class="pro icon"
-                  src="~/assets/icons/dota.png"
-                  alt="Pro icon"
-                />
+                <span class="icon">
+                  <font-awesome-icon icon="fa-solid fa-medal" />
+                </span>
                 <template v-if="player.steamAccount.team">
                   <span class="aditional tag">{{
                     player.steamAccount.proSteamAccount.team.tag
@@ -60,17 +75,18 @@
           </div>
         </div>
       </div>
-      <div class="direHeroes">
+      <div class="diretHeroes tile is-3 is-parent is-vertical box">
         <div v-for="player in match.players">
-          <div class="dire hero" v-if="player.isRadiant == false">
+          <div
+            class="dire hero tile is-child box"
+            v-if="player.isRadiant == false"
+          >
             <span class="player_basic">
               {{ player.heroId }}
               <template v-if="player.steamAccount.proSteamAccount">
-                <img
-                  class="pro icon"
-                  src="~/assets/icons/dota.png"
-                  alt="Pro icon"
-                />
+                <span class="icon">
+                  <font-awesome-icon icon="fa-solid fa-medal" />
+                </span>
                 <template v-if="player.steamAccount.team">
                   <span class="aditional tag">{{
                     player.steamAccount.proSteamAccount.team.tag
@@ -81,13 +97,13 @@
               <template v-else>
                 {{ player.steamAccount.name }}
               </template>
-            </span>
-            <span class="KDA">
+              <span class="KDA">
                 _KDA {{ player.numKills }} / {{ player.numDeaths }} /
                 {{ player.numAssists }}
               </span>
               <span class="networth"> _networth {{ player.networth }} </span>
             </span>
+
             <span class="player_avg">
               <template v-if="player.steamAccount.proSteamAccount">
                 signHeroes{{
@@ -99,42 +115,37 @@
           </div>
         </div>
       </div>
-      <div class="teamsSummary">
-        <span class="radiant_team">
-           <img
-                  class="teamLogo icon"
-                  src={this.props.match.radiantTeam.logo}
-                  alt="Radiant logo"
-                />
-          match.avg.teams.radiantTeam.total_winrate 
-          match.avg.teams.radiantTeam.winrateVersus
-          match.avg.teams.radiantTeam.winrateWidthHeroes[array]
-          match.avg.teams.radiantTeam.winrateVersusHeroes[array]
-           
-        </span>
-        <span class="insight">
-          Win Probability 
-          "Side winrate"
 
-          coefficient
-        </span>
-        <span class="dire_team">
-          <img
-                  class="teamLogo icon"
-                  src={this.props.match.direTeam.logo}
-                  alt="Dire logo"
-                />
-          match.avg.teams.direTeam.total_winrate 
-          match.avg.teams.direTeam.winrateVersus
-          match.avg.teams.direTeam.winrateWidthHeroes[array]
-          match.avg.teams.direTeam.winrateVersusHeroes[array]
-           
-        </span>
+      <div class="teamsSummary tile is-6 is-parent box">
+        <div class="radiant_team tile is-child box">
+          {{ match.radiantScore }}
+          <template v-if="match.radiantTeam">
+            <img
+              class="RadiantLogo teamLogo"
+              v-bind:src="match.radiantTeam.logo"
+              alt="Radiant logo"
+            />
+          </template>
+        </div>
+        <div class="insight tile is-child box">
+          Win Probability "Side winrate" coefficient
+        </div>
+        <div class="dire_team tile is-child box">
+          {{ match.direScore }}
+          <template v-if="match.direTeam">
+            <img
+              class="DireLogo teamLogo"
+              v-bind:src="match.direTeam.logo"
+              alt="Dire logo"
+            />
+          </template>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <style>
+/*
 .player_basic {
   color: aliceblue;
   display: flex;
@@ -201,9 +212,15 @@
 .pro {
   opacity: 0.8;
 }
+*/
 </style>
 
 <script>
+// match.avg.teams.radiantTeam.total_winrate
+//           match.avg.teams.radiantTeam.winrateVersus
+//           match.avg.teams.radiantTeam.winrateWidthHeroes[array]
+//           match.avg.teams.radiantTeam.winrateVersusHeroes[array]
+
 export default {
   name: 'matchSummary',
   props: {

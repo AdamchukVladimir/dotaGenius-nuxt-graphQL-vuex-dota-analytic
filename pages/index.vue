@@ -1,21 +1,22 @@
 <template>
-  <div class="matches">
-    <li v-for="match in matchesState" :key="match.matchId">
+  <div class="matches container">
+    <li class="section" v-for="match in matchesState" :key="match.matchId">
       <matchSummary :match="match" />
     </li>
   </div>
 </template>
 
 <style>
+/*
 .matches {
   display: grid;
   justify-content: center;
 
   background-color: rgb(31, 31, 31);
 }
+*/
 li {
   list-style-type: none;
-  margin-bottom: 20px;
 }
 </style>
 <script>

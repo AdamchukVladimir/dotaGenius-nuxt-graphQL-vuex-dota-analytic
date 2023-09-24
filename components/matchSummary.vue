@@ -1,30 +1,29 @@
 <template>
   <div>
-    <div class="match tile is-ancestor">
+    <div class="match tile is-ancestor box">
       <div class="matchInfoLeft tile is-2 is-parent">
         <div class="tile is-child box">
-          <div class="tile">
-            <span class="icon">
-              <font-awesome-icon icon="fa-solid fa-clock" />
-            </span>
-            {{ formatGameTime }}
-          </div>
+          <span class="icon">
+            <font-awesome-icon icon="fa-solid fa-clock" />
+          </span>
+          {{ formatGameTime }}
         </div>
       </div>
       <div class="matchID tile is-2 is-parent">
-        <div class="tile is-child box">
-          <div class="tile">ID: {{ match.matchId }}</div>
-        </div>
+        <div class="tile is-child box">ID: {{ match.matchId }}</div>
       </div>
       <div class="avarageMMR tile is-4 is-parent">
         <div class="tile is-child box">
           <template v-if="match.averageRank">
-            <div class="tile">Average Rank: {{ match.averageRank }}MMR</div>
+            Average Rank: {{ match.averageRank }} MMR
           </template>
           <template v-else-if="match.league">
-            <div class="tile">{{ match.league.name }}</div>
+            {{ match.league.name }}
           </template>
         </div>
+      </div>
+      <div class="insight tile is-2 is-parent">
+        <div class="tile is-child box">Win Probability</div>
       </div>
       <div class="matchInfoRight tile is-2 is-parent">
         <div class="tile is-child box">
@@ -36,46 +35,49 @@
       </div>
     </div>
     <div class="matchInfoTotal tile is-ancestor box">
-      <div class="radiantHeroes tile is-3 is-parent is-vertical box">
+      <div class="radiantHeroes tile is-4 is-parent is-vertical box">
         <div v-for="player in match.players">
           <div
             class="radiant hero tile is-child box"
             v-if="player.isRadiant == true"
           >
-            <span class="player_basic">
-              {{ player.heroId }}
-              <template v-if="player.steamAccount.proSteamAccount">
-                <span class="icon">
-                  <font-awesome-icon icon="fa-solid fa-medal" />
-                </span>
-                <template v-if="player.steamAccount.team">
-                  <span class="aditional tag">{{
-                    player.steamAccount.proSteamAccount.team.tag
-                  }}</span>
+            <div class="player_basic columns is-gapless">
+              <div class="avatar column is-two-fifths">
+                {{ player.heroId }}
+                <template v-if="player.steamAccount.proSteamAccount">
+                  <template v-if="player.steamAccount.team">
+                    <span class="aditional tag">{{
+                      player.steamAccount.proSteamAccount.team.tag
+                    }}</span>
+                  </template>
+                  {{ player.steamAccount.proSteamAccount.name }}
                 </template>
-                {{ player.steamAccount.proSteamAccount.name }}
-              </template>
-              <template v-else>
-                {{ player.steamAccount.name }}
-              </template>
-              <span class="KDA">
-                _KDA {{ player.numKills }} / {{ player.numDeaths }} /
+                <template v-else>
+                  {{ player.steamAccount.name }}
+                </template>
+              </div>
+              <div class="KDA column">
+                {{ player.numKills }} / {{ player.numDeaths }} /
                 {{ player.numAssists }}
-              </span>
-              <span class="networth"> _networth {{ player.networth }} </span>
-            </span>
-            <span class="player_avg">
-              <template v-if="player.steamAccount.proSteamAccount">
-                signHeroes{{
-                  player.steamAccount.proSteamAccount.signatureHeroes
-                }}
-              </template>
-              player.avg.winrate hero.avg.winrate
-            </span>
+              </div>
+
+              <div class="player_avg_winrate column">
+                <span class="icon">
+                  <font-awesome-icon icon="fa-solid fa-headset" />
+                </span>
+                52.5
+              </div>
+              <div class="hero_avg_winrate column">
+                <span class="icon">
+                  <font-awesome-icon icon="fa-solid fa-chess-rook" />
+                </span>
+                53.3
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="diretHeroes tile is-3 is-parent is-vertical box">
+      <div class="diretHeroes tile is-4 is-parent is-vertical box">
         <div v-for="player in match.players">
           <div
             class="dire hero tile is-child box"
@@ -84,9 +86,6 @@
             <span class="player_basic">
               {{ player.heroId }}
               <template v-if="player.steamAccount.proSteamAccount">
-                <span class="icon">
-                  <font-awesome-icon icon="fa-solid fa-medal" />
-                </span>
                 <template v-if="player.steamAccount.team">
                   <span class="aditional tag">{{
                     player.steamAccount.proSteamAccount.team.tag
@@ -98,25 +97,29 @@
                 {{ player.steamAccount.name }}
               </template>
               <span class="KDA">
-                _KDA {{ player.numKills }} / {{ player.numDeaths }} /
+                {{ player.numKills }} / {{ player.numDeaths }} /
                 {{ player.numAssists }}
               </span>
-              <span class="networth"> _networth {{ player.networth }} </span>
-            </span>
-
-            <span class="player_avg">
-              <template v-if="player.steamAccount.proSteamAccount">
-                signHeroes{{
-                  player.steamAccount.proSteamAccount.signatureHeroes
-                }}
-              </template>
-              player.avg.winrate hero.avg.winrate
+              <span class="player_avg"
+                ><span class="player_avg_winrate">
+                  <span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-headset" />
+                  </span>
+                  52.5%
+                </span>
+                <span class="hero_avg_winrate">
+                  <span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-chess-rook" />
+                  </span>
+                  53.3%
+                </span></span
+              >
             </span>
           </div>
         </div>
       </div>
 
-      <div class="teamsSummary tile is-6 is-parent box">
+      <div class="teamsSummary tile is-4 is-parent box">
         <div class="radiant_team tile is-child box">
           {{ match.radiantScore }}
           <template v-if="match.radiantTeam">
@@ -126,9 +129,6 @@
               alt="Radiant logo"
             />
           </template>
-        </div>
-        <div class="insight tile is-child box">
-          Win Probability "Side winrate" coefficient
         </div>
         <div class="dire_team tile is-child box">
           {{ match.direScore }}
@@ -145,6 +145,14 @@
   </div>
 </template>
 <style>
+.avatar {
+  text-overflow: ellipsis;
+}
+
+/*
+<!-player.avg.winrate hero.avg.winrate->
+*/
+
 /*
 .player_basic {
   color: aliceblue;

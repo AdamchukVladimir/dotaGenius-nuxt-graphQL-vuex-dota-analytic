@@ -18,7 +18,7 @@
             Average Rank: {{ match.averageRank }} MMR
           </template>
           <template v-else-if="match.league">
-            {{ match.league.name }}
+            {{ match.league.displayName }}
           </template>
         </div>
       </div>
@@ -35,91 +35,104 @@
       </div>
     </div>
     <div class="matchInfoTotal tile is-ancestor box">
-      <div class="radiantHeroes tile is-4 is-parent is-vertical box">
-        <div v-for="player in match.players">
-          <div
-            class="radiant hero tile is-child box"
-            v-if="player.isRadiant == true"
-          >
-            <div class="player_basic columns is-gapless">
-              <div class="avatar column is-two-fifths">
-                {{ player.heroId }}
-                <template v-if="player.steamAccount.proSteamAccount">
-                  <template v-if="player.steamAccount.team">
-                    <span class="aditional tag">{{
-                      player.steamAccount.proSteamAccount.team.tag
-                    }}</span>
-                  </template>
-                  {{ player.steamAccount.proSteamAccount.name }}
+      <div class="radiantHeroes tile is-4 is-parent is-vertical">
+        <div
+          class="radiant hero tile is-child box"
+          v-for="player in match.players"
+          v-if="player.isRadiant == true"
+        >
+          <div class="player_basic columns is-gapless">
+            <div class="avatar column is-two-fifths">
+              <span>{{ player.heroId }}</span>
+              <template v-if="player.steamAccount.proSteamAccount">
+                <template v-if="player.steamAccount.proSteamAccount.team">
+                  <span class="no-space aditional_tag">{{
+                    player.steamAccount.proSteamAccount.team.tag + '.'
+                  }}</span>
+                  <span class="no-space nickname">{{
+                    player.steamAccount.proSteamAccount.name
+                      | truncateTextWithTag
+                  }}</span>
                 </template>
                 <template v-else>
-                  {{ player.steamAccount.name }}
+                  {{ player.steamAccount.proSteamAccount.name | truncateText }}
                 </template>
-              </div>
-              <div class="KDA column">
-                {{ player.numKills }} / {{ player.numDeaths }} /
-                {{ player.numAssists }}
-              </div>
+              </template>
+              <template v-else>
+                {{ player.steamAccount.name | truncateText }}
+              </template>
+            </div>
+            <div class="KDA column">
+              {{ player.numKills || 0 }}/{{ player.numDeaths || 0 }}/{{
+                player.numAssists || 0
+              }}
+            </div>
 
-              <div class="player_avg_winrate column">
-                <span class="icon">
-                  <font-awesome-icon icon="fa-solid fa-headset" />
-                </span>
-                52.5
-              </div>
-              <div class="hero_avg_winrate column">
-                <span class="icon">
-                  <font-awesome-icon icon="fa-solid fa-chess-rook" />
-                </span>
-                53.3
-              </div>
+            <div class="player_avg_winrate column">
+              <span class="icon">
+                <font-awesome-icon icon="fa-solid fa-headset" />
+              </span>
+              52.5
+            </div>
+            <div class="hero_avg_winrate column">
+              <span class="icon">
+                <font-awesome-icon icon="fa-solid fa-chess-rook" />
+              </span>
+              53.3
             </div>
           </div>
         </div>
       </div>
-      <div class="diretHeroes tile is-4 is-parent is-vertical box">
-        <div v-for="player in match.players">
-          <div
-            class="dire hero tile is-child box"
-            v-if="player.isRadiant == false"
-          >
-            <span class="player_basic">
-              {{ player.heroId }}
+      <div class="diretHeroes tile is-4 is-parent is-vertical">
+        <div
+          class="dire hero tile is-child box"
+          v-for="player in match.players"
+          v-if="player.isRadiant == false"
+        >
+          <div class="player_basic columns is-gapless">
+            <div class="avatar column is-two-fifths">
+              <span>{{ player.heroId }}</span>
               <template v-if="player.steamAccount.proSteamAccount">
-                <template v-if="player.steamAccount.team">
-                  <span class="aditional tag">{{
-                    player.steamAccount.proSteamAccount.team.tag
+                <template v-if="player.steamAccount.proSteamAccount.team">
+                  <span class="no-space aditional_tag">{{
+                    player.steamAccount.proSteamAccount.team.tag + '.'
+                  }}</span>
+                  <span class="no-space nickname">{{
+                    player.steamAccount.proSteamAccount.name
+                      | truncateTextWithTag
                   }}</span>
                 </template>
-                {{ player.steamAccount.proSteamAccount.name }}
+                <template v-else>
+                  {{ player.steamAccount.proSteamAccount.name | truncateText }}
+                </template>
               </template>
               <template v-else>
-                {{ player.steamAccount.name }}
+                {{ player.steamAccount.name | truncateText }}
               </template>
-              <span class="KDA">
-                {{ player.numKills }} / {{ player.numDeaths }} /
-                {{ player.numAssists }}
+            </div>
+            <div class="KDA column">
+              {{ player.numKills || 0 }}/{{ player.numDeaths || 0 }}/{{
+                player.numAssists || 0
+              }}
+            </div>
+
+            <div class="player_avg_winrate column">
+              <span class="icon">
+                <font-awesome-icon icon="fa-solid fa-headset" />
               </span>
-              <span class="player_avg"
-                ><span class="player_avg_winrate">
-                  <span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-headset" />
-                  </span>
-                  52.5%
-                </span>
-                <span class="hero_avg_winrate">
-                  <span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-chess-rook" />
-                  </span>
-                  53.3%
-                </span></span
-              >
-            </span>
+              52.5
+            </div>
+            <div class="hero_avg_winrate column">
+              <span class="icon">
+                <font-awesome-icon icon="fa-solid fa-chess-rook" />
+              </span>
+              53.3
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="teamsSummary tile is-4 is-parent box">
+      <div class="teamsSummary tile is-4 is-parent is-vertical">
         <div class="radiant_team tile is-child box">
           {{ match.radiantScore }}
           <template v-if="match.radiantTeam">
@@ -144,11 +157,94 @@
     </div>
   </div>
 </template>
-<style>
-.avatar {
-  text-overflow: ellipsis;
-}
 
+<script>
+// match.avg.teams.radiantTeam.total_winrate
+//           match.avg.teams.radiantTeam.winrateVersus
+//           match.avg.teams.radiantTeam.winrateWidthHeroes[array]
+//           match.avg.teams.radiantTeam.winrateVersusHeroes[array]
+
+export default {
+  name: 'matchSummary',
+  props: {
+    match: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    formatGameTime() {
+      return this.formatTime(this.match.gameTime)
+    },
+    formatDelayTime() {
+      return this.formatTime(this.match.delay)
+    },
+  },
+  methods: {
+    formatTime(seconds) {
+      //const seconds = this.match.gameTime
+      const hours = Math.floor(seconds / 3600)
+      const minutes = Math.floor((seconds % 3600) / 60)
+      const remainingSeconds = seconds % 60
+
+      if (hours > 0) {
+        return `${hours.toString().padStart(2, '0')}:${minutes
+          .toString()
+          .padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`
+      } else {
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds
+          .toString()
+          .padStart(2, '0')}`
+      }
+    },
+  },
+  filters: {
+    truncateText(value) {
+      let length = 9
+      if (value.length > length) {
+        return value.slice(0, length) + '...'
+      }
+      return value
+    },
+    truncateTextWithTag(value) {
+      let length = 7
+      if (value.length > length) {
+        return value.slice(0, length) + '...'
+      }
+      return value
+    },
+  },
+  //     enemyClear() {
+  //       console.log("enemyClear");
+  //       var clearEnemyObject = {
+  //         EnemyClearId: this.enemyId,
+  //         EnemyClearPickId: this.enemyNumber,
+  //       };
+  //       this.$emit("enemyClear", clearEnemyObject);
+  //     },
+  //   },
+  //   data() {
+  //     return {
+  //       EnemyFlag: false,
+  //       counter: 0,
+  //     };
+  //   },
+}
+</script>
+
+<style>
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+.aditional_tag {
+  margin-right: -2px;
+  color: #4a4a4a77;
+}
+.nickname {
+  margin-left: -2px;
+  color: rgba(218, 165, 32, 0.822);
+}
 /*
 <!-player.avg.winrate hero.avg.winrate->
 */
@@ -222,61 +318,3 @@
 }
 */
 </style>
-
-<script>
-// match.avg.teams.radiantTeam.total_winrate
-//           match.avg.teams.radiantTeam.winrateVersus
-//           match.avg.teams.radiantTeam.winrateWidthHeroes[array]
-//           match.avg.teams.radiantTeam.winrateVersusHeroes[array]
-
-export default {
-  name: 'matchSummary',
-  props: {
-    match: {
-      type: Object,
-      required: true,
-    },
-  },
-  computed: {
-    formatGameTime() {
-      return this.formatTime(this.match.gameTime)
-    },
-    formatDelayTime() {
-      return this.formatTime(this.match.delay)
-    },
-  },
-  methods: {
-    formatTime(seconds) {
-      //const seconds = this.match.gameTime
-      const hours = Math.floor(seconds / 3600)
-      const minutes = Math.floor((seconds % 3600) / 60)
-      const remainingSeconds = seconds % 60
-
-      if (hours > 0) {
-        return `${hours.toString().padStart(2, '0')}:${minutes
-          .toString()
-          .padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`
-      } else {
-        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds
-          .toString()
-          .padStart(2, '0')}`
-      }
-    },
-  },
-  //     enemyClear() {
-  //       console.log("enemyClear");
-  //       var clearEnemyObject = {
-  //         EnemyClearId: this.enemyId,
-  //         EnemyClearPickId: this.enemyNumber,
-  //       };
-  //       this.$emit("enemyClear", clearEnemyObject);
-  //     },
-  //   },
-  //   data() {
-  //     return {
-  //       EnemyFlag: false,
-  //       counter: 0,
-  //     };
-  //   },
-}
-</script>

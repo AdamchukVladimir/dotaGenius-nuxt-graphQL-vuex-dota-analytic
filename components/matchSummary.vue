@@ -1,40 +1,91 @@
 <template>
   <div>
-    <div class="match tile is-ancestor box">
-      <div class="matchInfoLeft tile is-2 is-parent">
-        <div class="tile is-child box">
-          <span class="icon">
-            <font-awesome-icon icon="fa-solid fa-clock" />
-          </span>
-          {{ formatGameTime }}
+    <div class="hero matchInfoTech">
+      <div class="tile is-ancestor">
+        <div class="matchInfoLeft tile is-2 is-parent">
+          <div class="tile is-child top_info box">
+            <span class="icon">
+              <font-awesome-icon icon="fa-solid fa-clock" />
+            </span>
+            {{ formatGameTime }}
+            <span class="icon">
+              <font-awesome-icon icon="fa-solid fa-hourglass-end" />
+            </span>
+            {{ formatDelayTime }}
+          </div>
         </div>
-      </div>
-      <div class="matchID tile is-2 is-parent">
-        <div class="tile is-child box">ID: {{ match.matchId }}</div>
-      </div>
-      <div class="avarageMMR tile is-4 is-parent">
-        <div class="tile is-child box">
-          <template v-if="match.averageRank">
-            Average Rank: {{ match.averageRank }} MMR
-          </template>
-          <template v-else-if="match.league">
-            {{ match.league.displayName }}
-          </template>
+        <div class="matchID tile is-2 is-parent">
+          <div class="tile is-child top_info box">
+            <span>ID: {{ match.matchId }}</span>
+          </div>
         </div>
-      </div>
-      <div class="insight tile is-2 is-parent">
-        <div class="tile is-child box">Win Probability</div>
-      </div>
-      <div class="matchInfoRight tile is-2 is-parent">
-        <div class="tile is-child box">
-          <span class="icon">
-            <font-awesome-icon icon="fa-solid fa-hourglass-end" />
-          </span>
-          {{ formatDelayTime }}
+        <div class="score tile is-2 is-parent">
+          <div class="tile is-child box">
+            <div class="media is-12">
+              <div class="columns">
+                <div class="column is-4">
+                  <figure class="image is-32x32">
+                    <img
+                      class="is-rounded"
+                      v-if="match.radiantTeam"
+                      v-bind:src="match.radiantTeam.logo"
+                      alt="Radiant image"
+                    />
+                    <img
+                      class="is-rounded"
+                      v-else
+                      src="~/assets/img/radiant_square.png"
+                      alt="Radiant image"
+                    />
+                  </figure>
+                </div>
+                <div class="column is-4 line_info">
+                  <span>{{ match.radiantScore }}:{{ match.direScore }}</span>
+                </div>
+                <div class="column is-4">
+                  <figure class="image is-32x32">
+                    <img
+                      class="is-rounded"
+                      v-if="match.direTeam"
+                      v-bind:src="match.direTeam.logo"
+                      alt="Dire image"
+                    />
+                    <img
+                      class="is-rounded"
+                      v-else
+                      src="~/assets/img/dire_square.png"
+                      alt="Radiant image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="insight_Probability tile is-2 is-parent">
+          <div class="tile is-child top_info box">
+            <span>Dire 69%</span>
+          </div>
+        </div>
+        <div class="insight_Coef tile is-2 is-parent">
+          <div class="tile is-child top_info box">
+            <span>Coef:</span>
+            <span>1.36 / 2.98</span>
+          </div>
+        </div>
+        <div class="avarageMMR tile is-2 is-parent">
+          <div class="tile is-child top_info box">
+            <template v-if="match.averageRank">
+              {{ match.averageRank }} MMR
+            </template>
+            <template v-else-if="match.league">
+              {{ match.league.displayName }}
+            </template>
+          </div>
         </div>
       </div>
     </div>
-    <div class="matchInfoTotal tile is-ancestor box">
+    <div class="matchInfoTotal tile is-ancestor">
       <div class="radiantHeroes tile is-4 is-parent is-vertical">
         <div
           class="radiant hero tile is-child box"
@@ -134,24 +185,142 @@
 
       <div class="teamsSummary tile is-4 is-parent is-vertical">
         <div class="radiant_team tile is-child box">
-          {{ match.radiantScore }}
-          <template v-if="match.radiantTeam">
-            <img
-              class="RadiantLogo teamLogo"
-              v-bind:src="match.radiantTeam.logo"
-              alt="Radiant logo"
-            />
-          </template>
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  class="is-rounded"
+                  v-if="match.radiantTeam"
+                  v-bind:src="match.radiantTeam.logo"
+                  alt="Radiant image"
+                />
+                <img
+                  class="is-rounded"
+                  v-else
+                  src="~/assets/img/radiant_square.png"
+                  alt="Radiant image"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p v-if="match.radiantTeam" class="title is-4">
+                {{ match.radiantTeam.name }}
+              </p>
+              <p class="subtitle is-6">
+                <span
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-ranking-star" />
+                  </span>
+                  52</span
+                >
+                <span
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-people-arrows" />
+                  </span>
+                  46</span
+                >
+              </p>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Winrate</th>
+                <th>h1</th>
+                <th>h2</th>
+                <th>h3</th>
+                <th>h4</th>
+                <th>h5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>With</th>
+                <td>1</td>
+                <td>38</td>
+                <td>23</td>
+                <td>12</td>
+                <td>68</td>
+              </tr>
+              <tr>
+                <th>Versus</th>
+                <td>2</td>
+                <td>38</td>
+                <td>20</td>
+                <td>11</td>
+                <td>7</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="dire_team tile is-child box">
-          {{ match.direScore }}
-          <template v-if="match.direTeam">
-            <img
-              class="DireLogo teamLogo"
-              v-bind:src="match.direTeam.logo"
-              alt="Dire logo"
-            />
-          </template>
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  class="is-rounded"
+                  v-if="match.direTeam"
+                  v-bind:src="match.direTeam.logo"
+                  alt="Dire image"
+                />
+                <img
+                  class="is-rounded"
+                  v-else
+                  src="~/assets/img/dire_square.png"
+                  alt="Dire image"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p v-if="match.direTeam" class="title is-4">
+                {{ match.direTeam.name }}
+              </p>
+              <p class="subtitle is-6">
+                <span
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-ranking-star" />
+                  </span>
+                  52</span
+                >
+                <span
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-people-arrows" />
+                  </span>
+                  46</span
+                >
+              </p>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Winrate</th>
+                <th>h1</th>
+                <th>h2</th>
+                <th>h3</th>
+                <th>h4</th>
+                <th>h5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>With</th>
+                <td>1</td>
+                <td>38</td>
+                <td>23</td>
+                <td>12</td>
+                <td>68</td>
+              </tr>
+              <tr>
+                <th>Versus</th>
+                <td>2</td>
+                <td>38</td>
+                <td>20</td>
+                <td>11</td>
+                <td>7</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -207,7 +376,7 @@ export default {
       return value
     },
     truncateTextWithTag(value) {
-      let length = 7
+      let length = 6
       if (value.length > length) {
         return value.slice(0, length) + '...'
       }
@@ -233,6 +402,20 @@ export default {
 </script>
 
 <style>
+.matchInfoTech {
+  margin-bottom: 3em;
+}
+.line_info {
+  text-align: center;
+  align-self: center;
+}
+.top_info {
+  text-align: center;
+  align-self: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .no-space {
   margin: 0;
   padding: 0;

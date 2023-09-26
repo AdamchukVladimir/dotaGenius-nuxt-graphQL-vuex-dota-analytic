@@ -1,6 +1,6 @@
 <template>
   <div class="matches container">
-    <li class="section" v-for="match in matchesState" :key="match.matchId">
+    <li class="section box" v-for="match in matchesState" :key="match.matchId">
       <matchSummary :match="match" />
     </li>
   </div>

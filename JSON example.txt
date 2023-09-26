@@ -1,23 +1,4 @@
-{
-  live {
-    matches(
-      request: {
-        skip: 0
-        take: 1000
-        #tiers: [
-        #  PROFESSIONAL
-        #  AMATEUR
-        #  MINOR
-        #  MAJOR
-        #  INTERNATIONAL
-        #  DPC_QUALIFIER
-        #  DPC_LEAGUE_QUALIFIER
-        #  DPC_LEAGUE
-        #  DPC_LEAGUE_FINALS
-        #]
-        isCompleted: false
-      }
-    ) {
+JSON {
       matchId
       league {
         id
@@ -25,31 +6,17 @@
         displayName
         basePrizePool
         prizePool
-
         tier
       }
       radiantScore
       direScore
-      delay
-      spectators
-      averageRank
-      radiantLead
-      lobbyType
-      serverSteamId
-      gameTime
-      completed
       radiantTeamId
       direTeamId
-      gameMode
       gameState
       gameMinute
       gameTime
       players {
         heroId
-        hero {
-          name
-          displayName
-        }
         name
         steamAccountId
         isRadiant
@@ -59,22 +26,14 @@
         numKills
         numDeaths
         numAssists
-        position
         steamAccount {
           profileUri
           avatar
           name
           proSteamAccount {
-            name
-            realName
-            romanizedRealName
             isPro
-            roles
-            signatureHeroes
             team {
               name
-              tag
-              logo
               winCount
               lossCount
             }
@@ -98,37 +57,18 @@
       radiantTeam {
         id
         name
-        tag
-        dateCreated
         isPro
-        isLocked
-        countryCode
-        url
-        logo
-        baseLogo
-        bannerLogo
         winCount
         lossCount
         lastMatchDateTime
-        countryName
       }
       direTeam {
         id
         name
-        tag
-        dateCreated
         isPro
-        isLocked
-        countryCode
-        url
-        logo
-        baseLogo
-        bannerLogo
         winCount
         lossCount
         lastMatchDateTime
-        countryName
       }
     }
-  }
-}
+  

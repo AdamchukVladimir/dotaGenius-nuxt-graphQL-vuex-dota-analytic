@@ -26,6 +26,7 @@
     "fs": "^0.0.1-security",
     "graphql-tag": "^2.12.6",
     "nuxt": "^2.15.8",
+    "nuxt-socket-io": "^2.0.3",
     "vue": "^2.7.10",
     "vue-cookies": "^1.8.3",
     "vue-server-renderer": "^2.7.10",

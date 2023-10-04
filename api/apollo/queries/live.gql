@@ -28,6 +28,7 @@
 
         tier
       }
+      gameState
       radiantScore
       direScore
       delay

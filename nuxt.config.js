@@ -48,7 +48,28 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/apollo',
     ['cookie-universal-nuxt', { parseJSON: false }],
+    'nuxt-socket-io',
   ],
+  io: {
+    // module options
+    sockets: [
+      {
+        default: true,
+        name: 'WebSocketBackend',
+        url: 'http://localhost:5000',
+      },
+    ],
+    server: {
+      /* CORS options */
+      cors: {
+        credentials: true,
+        origin: [
+          // whitelisted origins
+          'http://localhost:5000',
+        ],
+      },
+    },
+  },
   apollo: {
     clientConfigs: {
       default: {

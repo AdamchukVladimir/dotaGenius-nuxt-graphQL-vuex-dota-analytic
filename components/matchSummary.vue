@@ -13,7 +13,7 @@
               <span title="Average Rank">{{ match.averageRank }} MMR</span>
             </template>
             <template v-else-if="match.league">
-              <span title="League Name">{{
+              <span :title="match.league.displayName">{{
                 match.league.displayName | truncateText(16)
               }}</span>
             </template>
@@ -119,21 +119,34 @@
             <div class="player_nickname column is-4">
               <template v-if="player.steamAccount.proSteamAccount">
                 <template v-if="player.steamAccount.proSteamAccount.team">
-                  <span class="no-space aditional_tag">{{
-                    player.steamAccount.proSteamAccount.team.tag + '.'
-                  }}</span>
-                  <span class="no-space nickname">{{
-                    player.steamAccount.proSteamAccount.name | truncateText(8)
-                  }}</span>
+                  <span
+                    class="no-space aditional_tag"
+                    :title="player.steamAccount.proSteamAccount.team.name"
+                    >{{
+                      player.steamAccount.proSteamAccount.team.tag + '.'
+                    }}</span
+                  >
+                  <span
+                    class="no-space nickname"
+                    :title="player.steamAccount.proSteamAccount.name"
+                    >{{
+                      player.steamAccount.proSteamAccount.name | truncateText(8)
+                    }}</span
+                  >
                 </template>
                 <template v-else>
-                  {{
-                    player.steamAccount.proSteamAccount.name | truncateText(11)
-                  }}
+                  <span :title="player.steamAccount.proSteamAccount.name">
+                    {{
+                      player.steamAccount.proSteamAccount.name
+                        | truncateText(11)
+                    }}
+                  </span>
                 </template>
               </template>
               <template v-else>
-                {{ player.steamAccount.name | truncateText(11) }}
+                <span :title="player.steamAccount.name">{{
+                  player.steamAccount.name | truncateText(11)
+                }}</span>
               </template>
             </div>
             <div class="KDA column is-3">
@@ -346,21 +359,34 @@
             <div class="player_nickname column is-4">
               <template v-if="player.steamAccount.proSteamAccount">
                 <template v-if="player.steamAccount.proSteamAccount.team">
-                  <span class="no-space aditional_tag">{{
-                    player.steamAccount.proSteamAccount.team.tag + '.'
-                  }}</span>
-                  <span class="no-space nickname">{{
-                    player.steamAccount.proSteamAccount.name | truncateText(8)
-                  }}</span>
+                  <span
+                    class="no-space aditional_tag"
+                    :title="player.steamAccount.proSteamAccount.team.name"
+                    >{{
+                      player.steamAccount.proSteamAccount.team.tag + '.'
+                    }}</span
+                  >
+                  <span
+                    class="no-space nickname"
+                    :title="player.steamAccount.proSteamAccount.name"
+                    >{{
+                      player.steamAccount.proSteamAccount.name | truncateText(8)
+                    }}</span
+                  >
                 </template>
                 <template v-else>
-                  {{
-                    player.steamAccount.proSteamAccount.name | truncateText(11)
-                  }}
+                  <span :title="player.steamAccount.proSteamAccount.name">
+                    {{
+                      player.steamAccount.proSteamAccount.name
+                        | truncateText(11)
+                    }}
+                  </span>
                 </template>
               </template>
               <template v-else>
-                {{ player.steamAccount.name | truncateText(11) }}
+                <span :title="player.steamAccount.name">{{
+                  player.steamAccount.name | truncateText(11)
+                }}</span>
               </template>
             </div>
             <div class="KDA column is-3">

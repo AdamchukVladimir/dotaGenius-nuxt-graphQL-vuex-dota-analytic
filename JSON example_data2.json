@@ -1,0 +1,1075 @@
+[
+    {
+        "matchId": 7363686331,
+        "league": {
+            "id": 15737,
+            "name": null,
+            "displayName": "Pinnacle Cup: Malta Vibes #4",
+            "basePrizePool": 50000,
+            "prizePool": 50000,
+            "tier": "PROFESSIONAL",
+            "__typename": "LeagueType"
+        },
+        "radiantScore": 2,
+        "direScore": 0,
+        "delay": 900,
+        "spectators": 15,
+        "averageRank": null,
+        "radiantLead": 745,
+        "lobbyType": "PRACTICE",
+        "serverSteamId": 90176882547142660,
+        "gameTime": 61,
+        "completed": false,
+        "radiantTeamId": 9175409,
+        "direTeamId": 8728920,
+        "gameMode": "CAPTAINS_MODE",
+        "gameState": "GAME_IN_PROGRESS",
+        "gameMinute": 1,
+        "players": [
+            {
+                "heroId": 101,
+                "hero": {
+                    "name": "npc_dota_hero_skywrath_mage",
+                    "displayName": "Skywrath Mage",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 35504297,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 789,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 1,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/LeBrondota/",
+                    "avatar": "https://avatars.steamstatic.com/7d6b595b188ea983f6a213e2f6feba9402748504_full.jpg",
+                    "name": "< blank >",
+                    "proSteamAccount": {
+                        "name": "LeBronDota",
+                        "realName": "Никола Поповић",
+                        "romanizedRealName": "Nikola Popović",
+                        "isPro": true,
+                        "roles": 256,
+                        "signatureHeroes": [
+                            "107",
+                            "87",
+                            "84"
+                        ],
+                        "team": {
+                            "name": "Ancient Tribe",
+                            "tag": "ATT",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1991184321454001998/07A293B6565085107C7A440115D66892AA2006FC/",
+                            "winCount": 162,
+                            "lossCount": 117,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 93,
+                "hero": {
+                    "name": "npc_dota_hero_slark",
+                    "displayName": "Slark",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 193564777,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 3,
+                "networth": 1275,
+                "numKills": 1,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/OTAKER/",
+                    "avatar": "https://avatars.steamstatic.com/b470f34e03aff9df2c6f114ee85489684e5fbd0c_full.jpg",
+                    "name": "Otaker",
+                    "proSteamAccount": {
+                        "name": "Otaker",
+                        "realName": "Роман Алиуллов",
+                        "romanizedRealName": "Roman Aliullov",
+                        "isPro": true,
+                        "roles": 128,
+                        "signatureHeroes": [
+                            "109",
+                            "99",
+                            "114"
+                        ],
+                        "team": {
+                            "name": "UALEIKUMNIHAO",
+                            "tag": "ULK",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/2030611591031016241/6E2DD073E5D4644BC464A30217030A32E95A3D5A/",
+                            "winCount": 46,
+                            "lossCount": 41,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 96,
+                "hero": {
+                    "name": "npc_dota_hero_centaur",
+                    "displayName": "Centaur Warrunner",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 891521610,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 957,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 2,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/realmrluck/",
+                    "avatar": "https://avatars.steamstatic.com/fa2b40946efed5cce42e636966e54b9ba8ecebc1_full.jpg",
+                    "name": "Mr. Luck",
+                    "proSteamAccount": {
+                        "name": "Mr. Luck",
+                        "realName": "Levent Erinc Sözbir",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": null,
+                        "signatureHeroes": null,
+                        "team": {
+                            "name": "Ancient Tribe",
+                            "tag": "ATT",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1991184321454001998/07A293B6565085107C7A440115D66892AA2006FC/",
+                            "winCount": 162,
+                            "lossCount": 117,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 47,
+                "hero": {
+                    "name": "npc_dota_hero_viper",
+                    "displayName": "Viper",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 106755427,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 3,
+                "networth": 1006,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 1,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/1301203104031/",
+                    "avatar": "https://avatars.steamstatic.com/e0b06b910a1db811a4fc61ef09df6f7fa53ee3e2_full.jpg",
+                    "name": "pick -->",
+                    "proSteamAccount": {
+                        "name": "Mo13ei",
+                        "realName": "Fabian Knehr",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": null,
+                        "signatureHeroes": null,
+                        "team": {
+                            "name": "Ancient Tribe",
+                            "tag": "ATT",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1991184321454001998/07A293B6565085107C7A440115D66892AA2006FC/",
+                            "winCount": 162,
+                            "lossCount": 117,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 74,
+                "hero": {
+                    "name": "npc_dota_hero_invoker",
+                    "displayName": "Invoker",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 123717676,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 1,
+                "networth": 1032,
+                "numKills": 1,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/2ezy4jeezy/",
+                    "avatar": "https://avatars.steamstatic.com/dc87e974168c7b9a793c830a35e967780edb2619_full.jpg",
+                    "name": "no70",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 119,
+                "hero": {
+                    "name": "npc_dota_hero_dark_willow",
+                    "displayName": "Dark Willow",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 87063175,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 759,
+                "numKills": 0,
+                "numDeaths": 1,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/7864e563e54tr5ty/",
+                    "avatar": "https://avatars.steamstatic.com/a57e3f28349d3a84b2821a0085b8b49d63d00148_full.jpg",
+                    "name": "loser +_ boreDD",
+                    "proSteamAccount": {
+                        "name": "LESLÃO",
+                        "realName": "Rodrigo Lelis Santos",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": 4,
+                        "signatureHeroes": [
+                            "55",
+                            "65",
+                            "16"
+                        ],
+                        "team": {
+                            "name": "nouns",
+                            "tag": "nou",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1861686187975269057/6E221E0B04CCB4AEF93A3FDA4DC7873A1BBAFAE2/",
+                            "winCount": 125,
+                            "lossCount": 93,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 107,
+                "hero": {
+                    "name": "npc_dota_hero_earth_spirit",
+                    "displayName": "Earth Spirit",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 126238768,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 1,
+                "networth": 965,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198086504496/",
+                    "avatar": "https://avatars.steamstatic.com/28ae90f5a35a867c6b8ed705b082d67d5fd0dadf_full.jpg",
+                    "name": "Can't bring me down",
+                    "proSteamAccount": {
+                        "name": "Gunnar",
+                        "realName": "Nico Lopez",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": 144,
+                        "signatureHeroes": [
+                            "13",
+                            "106",
+                            "46"
+                        ],
+                        "team": {
+                            "name": "nouns",
+                            "tag": "nou",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1861686187975269057/6E221E0B04CCB4AEF93A3FDA4DC7873A1BBAFAE2/",
+                            "winCount": 125,
+                            "lossCount": 93,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 37,
+                "hero": {
+                    "name": "npc_dota_hero_warlock",
+                    "displayName": "Warlock",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 81475303,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 723,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/yamsun/",
+                    "avatar": "https://avatars.steamstatic.com/462ac7b7a5e2395dce1e4b097e914a847ad899b6_full.jpg",
+                    "name": "PGWN",
+                    "proSteamAccount": {
+                        "name": "Yamsun",
+                        "realName": "Luke Wang",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": null,
+                        "signatureHeroes": null,
+                        "team": {
+                            "name": "nouns",
+                            "tag": "nou",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1861686187975269057/6E221E0B04CCB4AEF93A3FDA4DC7873A1BBAFAE2/",
+                            "winCount": 125,
+                            "lossCount": 93,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 46,
+                "hero": {
+                    "name": "npc_dota_hero_templar_assassin",
+                    "displayName": "Templar Assassin",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 164685175,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 2,
+                "networth": 973,
+                "numKills": 0,
+                "numDeaths": 1,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198124950903/",
+                    "avatar": "https://avatars.steamstatic.com/8878c04396cabd17f41438b654d6ed54eb3f4142_full.jpg",
+                    "name": "tranquility",
+                    "proSteamAccount": {
+                        "name": "K1",
+                        "realName": "Héctor Antonio Rodríguez",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": 128,
+                        "signatureHeroes": [
+                            "54",
+                            "42",
+                            "73"
+                        ],
+                        "team": {
+                            "name": "nouns",
+                            "tag": "nou",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1861686187975269057/6E221E0B04CCB4AEF93A3FDA4DC7873A1BBAFAE2/",
+                            "winCount": 125,
+                            "lossCount": 93,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 78,
+                "hero": {
+                    "name": "npc_dota_hero_brewmaster",
+                    "displayName": "Brewmaster",
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 84429681,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 2,
+                "networth": 894,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198044695409/",
+                    "avatar": "https://avatars.steamstatic.com/4655f0602314e3d549f2ae1065f8761668217780_full.jpg",
+                    "name": "['''''][]][]]]]'']",
+                    "proSteamAccount": {
+                        "name": "Moo",
+                        "realName": "David William Hull",
+                        "romanizedRealName": null,
+                        "isPro": true,
+                        "roles": 144,
+                        "signatureHeroes": [
+                            "93",
+                            "8",
+                            "114"
+                        ],
+                        "team": {
+                            "name": "nouns",
+                            "tag": "nou",
+                            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1861686187975269057/6E221E0B04CCB4AEF93A3FDA4DC7873A1BBAFAE2/",
+                            "winCount": 125,
+                            "lossCount": 93,
+                            "__typename": "TeamType"
+                        },
+                        "__typename": "ProSteamAccountType"
+                    },
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            }
+        ],
+        "playbackData": {
+            "pickBans": [
+                {
+                    "isPick": true,
+                    "heroId": 74,
+                    "order": 0,
+                    "bannedHeroId": null,
+                    "isRadiant": true,
+                    "baseWinRate": 50,
+                    "adjustedWinRate": 51,
+                    "position": "POSITION_2",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 78,
+                    "order": 1,
+                    "bannedHeroId": null,
+                    "isRadiant": false,
+                    "baseWinRate": 51,
+                    "adjustedWinRate": 38,
+                    "position": "POSITION_3",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 1,
+                    "bannedHeroId": 38,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 2,
+                    "bannedHeroId": 80,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 3,
+                    "bannedHeroId": 18,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 4,
+                    "bannedHeroId": 137,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 5,
+                    "bannedHeroId": 53,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 6,
+                    "bannedHeroId": 50,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 7,
+                    "bannedHeroId": 120,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 9,
+                    "bannedHeroId": 83,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 10,
+                    "bannedHeroId": 44,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 11,
+                    "bannedHeroId": 72,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 119,
+                    "order": 12,
+                    "bannedHeroId": null,
+                    "isRadiant": false,
+                    "baseWinRate": 38,
+                    "adjustedWinRate": 33,
+                    "position": "POSITION_2",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 96,
+                    "order": 13,
+                    "bannedHeroId": null,
+                    "isRadiant": true,
+                    "baseWinRate": 33,
+                    "adjustedWinRate": 35,
+                    "position": "POSITION_3",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 101,
+                    "order": 14,
+                    "bannedHeroId": null,
+                    "isRadiant": true,
+                    "baseWinRate": 35,
+                    "adjustedWinRate": 33,
+                    "position": "POSITION_4",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 46,
+                    "order": 15,
+                    "bannedHeroId": null,
+                    "isRadiant": false,
+                    "baseWinRate": 33,
+                    "adjustedWinRate": 31,
+                    "position": "POSITION_1",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 93,
+                    "order": 16,
+                    "bannedHeroId": null,
+                    "isRadiant": true,
+                    "baseWinRate": 31,
+                    "adjustedWinRate": 36,
+                    "position": "POSITION_1",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 37,
+                    "order": 17,
+                    "bannedHeroId": null,
+                    "isRadiant": false,
+                    "baseWinRate": 36,
+                    "adjustedWinRate": 35,
+                    "position": "POSITION_5",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 18,
+                    "bannedHeroId": 23,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 19,
+                    "bannedHeroId": 100,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 20,
+                    "bannedHeroId": 79,
+                    "isRadiant": false,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 47,
+                    "order": 21,
+                    "bannedHeroId": null,
+                    "isRadiant": true,
+                    "baseWinRate": 35,
+                    "adjustedWinRate": 34,
+                    "position": "POSITION_5",
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": false,
+                    "heroId": null,
+                    "order": 22,
+                    "bannedHeroId": 21,
+                    "isRadiant": true,
+                    "baseWinRate": null,
+                    "adjustedWinRate": null,
+                    "position": null,
+                    "__typename": "MatchLivePickBanType"
+                },
+                {
+                    "isPick": true,
+                    "heroId": 107,
+                    "order": 23,
+                    "bannedHeroId": null,
+                    "isRadiant": false,
+                    "baseWinRate": 34,
+                    "adjustedWinRate": 43,
+                    "position": "POSITION_4",
+                    "__typename": "MatchLivePickBanType"
+                }
+            ],
+            "__typename": "MatchLivePlaybackDataType"
+        },
+        "radiantTeam": {
+            "id": 9175409,
+            "name": "MarsBet Team",
+            "tag": "MarsBet",
+            "dateCreated": null,
+            "isPro": null,
+            "isLocked": null,
+            "countryCode": null,
+            "url": null,
+            "logo": "https://steamusercontent-a.akamaihd.net/ugc/2048629496910525034/D8C98865573A293408B8D257E083D05582DDB09B/",
+            "baseLogo": null,
+            "bannerLogo": "https://steamusercontent-a.akamaihd.net/ugc/2048629496910525225/70C27ADE3BFBBEA5ECAA64B2EBDD2FAD706B8C4F/",
+            "winCount": 28,
+            "lossCount": 24,
+            "lastMatchDateTime": 1696348097,
+            "countryName": "",
+            "__typename": "TeamType"
+        },
+        "direTeam": {
+            "id": 8728920,
+            "name": "nouns",
+            "tag": "nou",
+            "dateCreated": null,
+            "isPro": true,
+            "isLocked": null,
+            "countryCode": null,
+            "url": null,
+            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1861686187975269057/6E221E0B04CCB4AEF93A3FDA4DC7873A1BBAFAE2/",
+            "baseLogo": null,
+            "bannerLogo": "https://steamusercontent-a.akamaihd.net/ugc/1861685581363283351/FFB96063899BCCF9CF5959A61BD15053F97878D8/",
+            "winCount": 125,
+            "lossCount": 93,
+            "lastMatchDateTime": 1696348097,
+            "countryName": "",
+            "__typename": "TeamType"
+        },
+        "__typename": "MatchLiveType"
+    },
+    {
+        "matchId": 7363740873,
+        "league": {
+            "id": 14915,
+            "name": null,
+            "displayName": "Ultras Dota Pro League 2023",
+            "basePrizePool": 10000,
+            "prizePool": 10000,
+            "tier": "PROFESSIONAL",
+            "__typename": "LeagueType"
+        },
+        "radiantScore": 0,
+        "direScore": 0,
+        "delay": 120,
+        "spectators": 0,
+        "averageRank": null,
+        "radiantLead": 0,
+        "lobbyType": "PRACTICE",
+        "serverSteamId": 90176882866320400,
+        "gameTime": -90,
+        "completed": false,
+        "radiantTeamId": 8533458,
+        "direTeamId": 9175367,
+        "gameMode": "CAPTAINS_MODE",
+        "gameState": "HERO_SELECTION",
+        "gameMinute": -1,
+        "players": [
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 185879747,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198146145475/",
+                    "avatar": "https://avatars.steamstatic.com/ac0824d3009ffb8c35427c1d5da88b1d6a03928b_full.jpg",
+                    "name": "sk4rab3i",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 2491317,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561197962757045/",
+                    "avatar": "https://avatars.steamstatic.com/3e1f0c27b81173f8b76d84ae742853f26d8efc9e_full.jpg",
+                    "name": "Tempesta",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 339941742,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/docktormengele/",
+                    "avatar": "https://avatars.steamstatic.com/b2459d5610262d7acbe4325cee58011c47f100d4_full.jpg",
+                    "name": "D.M.",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 1247302157,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561199207567885/",
+                    "avatar": "https://avatars.steamstatic.com/111f2361c5641ce058f945ae4c3f21f23a811a3a_full.jpg",
+                    "name": "Literally me",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 394524089,
+                "isRadiant": true,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198354789817/",
+                    "avatar": "https://avatars.steamstatic.com/1d0110aba2eb11d16758a01b84d0ac283e5374c9_full.jpg",
+                    "name": "Oreon",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 412320425,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198372586153/",
+                    "avatar": "https://avatars.steamstatic.com/80941098f64677f468960470c09b1a9ec9075700_full.jpg",
+                    "name": "zoned",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 1555069545,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561199515335273/",
+                    "avatar": "https://avatars.steamstatic.com/0000000000000000000000000000000000000000_full.jpg",
+                    "name": "uzivert",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 1598219170,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561199558484898/",
+                    "avatar": "https://avatars.steamstatic.com/0000000000000000000000000000000000000000_full.jpg",
+                    "name": "lmaooo",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 1291449666,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561199251715394/",
+                    "avatar": "https://avatars.steamstatic.com/c22bebc1e8c5dc85fc3028acea7d187b2da9f9f3_full.jpg",
+                    "name": "сдох",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            },
+            {
+                "heroId": 0,
+                "hero": {
+                    "name": "npc_dota_hero_base",
+                    "displayName": null,
+                    "__typename": "HeroType"
+                },
+                "name": null,
+                "steamAccountId": 184455528,
+                "isRadiant": false,
+                "position": null,
+                "numLastHits": 0,
+                "networth": 0,
+                "numKills": 0,
+                "numDeaths": 0,
+                "numAssists": 0,
+                "steamAccount": {
+                    "profileUri": "https://steamcommunity.com/profiles/76561198144721256/",
+                    "avatar": "https://avatars.steamstatic.com/6e983598a133933684b68251556955e970f0bd61_full.jpg",
+                    "name": "ariamis",
+                    "proSteamAccount": null,
+                    "__typename": "SteamAccountType"
+                },
+                "__typename": "MatchLivePlayerType"
+            }
+        ],
+        "playbackData": {
+            "pickBans": [],
+            "__typename": "MatchLivePlaybackDataType"
+        },
+        "radiantTeam": {
+            "id": 8533458,
+            "name": "Team Flamingos",
+            "tag": null,
+            "dateCreated": null,
+            "isPro": null,
+            "isLocked": null,
+            "countryCode": null,
+            "url": null,
+            "logo": "https://steamusercontent-a.akamaihd.net/ugc/1618471532867651602/1E80D4492EBF01893BEA19F8E96154163B9D45DE/",
+            "baseLogo": null,
+            "bannerLogo": null,
+            "winCount": 875,
+            "lossCount": 629,
+            "lastMatchDateTime": 1696280655,
+            "countryName": "",
+            "__typename": "TeamType"
+        },
+        "direTeam": {
+            "id": 9175367,
+            "name": "Business Club",
+            "tag": null,
+            "dateCreated": null,
+            "isPro": null,
+            "isLocked": null,
+            "countryCode": null,
+            "url": null,
+            "logo": "https://steamusercontent-a.akamaihd.net/ugc/2041874097465563602/35B8C3D831CFD2EF5A19512410C18F1B7F9C460A/",
+            "baseLogo": null,
+            "bannerLogo": "https://steamusercontent-a.akamaihd.net/ugc/2041874097465565267/85D5D697B874CB22373DBF618D2BD55A0E9798D8/",
+            "winCount": 78,
+            "lossCount": 18,
+            "lastMatchDateTime": 1696349901,
+            "countryName": "",
+            "__typename": "TeamType"
+        },
+        "__typename": "MatchLiveType"
+    }
+]

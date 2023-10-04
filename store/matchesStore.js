@@ -4,6 +4,7 @@ export const state = () => ({
       matchid: 7321123920,
     },
   ],
+  testTick: 0,
 })
 
 export const getters = {
@@ -16,6 +17,10 @@ export const mutations = {
   updateMatches(state, MatchesObj) {
     state.matches = MatchesObj.data.live.matches
     console.log('state.matches = ' + state.matches)
+  },
+  updateTick(state, Tick) {
+    state.testTick = Tick
+    console.log('state.testTick = ' + state.testTick)
   },
 }
 

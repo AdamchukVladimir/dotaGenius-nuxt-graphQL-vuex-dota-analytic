@@ -16,8 +16,9 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item is-active"> Live </a>
-              <a class="navbar-item"> History </a>
+              <nuxt-link class="navbar-item is-active" to="/">Live</nuxt-link>
+
+              <nuxt-link class="navbar-item" to="/history">History</nuxt-link>
             </div>
           </div>
         </div>

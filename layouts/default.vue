@@ -20,9 +20,9 @@ export default {
       name: 'main', // select "main" socket from nuxt.config.js - we could also skip this because "main" is the default socket
     })
 
-    this.socket.on('tick', (tickId) => {
+    this.socket.on('matches_predict', (tickId) => {
       console.log('latestTickId ' + tickId)
-      this.$store.commit('matchesStore/updateTick', tickId)
+      //this.$store.commit('matchesStore/updateTick', tickId)
     })
   },
   //end socket.io

@@ -465,7 +465,12 @@ export default {
     },
     getHeroIconUrl(heroName) {
       const imagePrefixRemoved = heroName.replace('npc_dota_hero_', '')
-      const imageUrl = `https://cdn.stratz.com/images/dota2/heroes/${imagePrefixRemoved}_icon.png`
+      let imageUrl = ''
+      if (heroName == 'npc_dota_hero_base')
+        return `https://cdn.stratz.com/images/dota2/heroes/placeholder_icon.png`
+      else {
+        imageUrl = `https://cdn.stratz.com/images/dota2/heroes/${imagePrefixRemoved}_icon.png`
+      }
       return imageUrl
     },
   },

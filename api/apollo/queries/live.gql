@@ -4,17 +4,18 @@
       request: {
         skip: 0
         take: 1000
-        #tiers: [
-        #  PROFESSIONAL
-        #  AMATEUR
-        #  MINOR
-        #  MAJOR
-        #  INTERNATIONAL
-        #  DPC_QUALIFIER
-        #  DPC_LEAGUE_QUALIFIER
-        #  DPC_LEAGUE
-        #  DPC_LEAGUE_FINALS
-        #]
+        tiers: [
+          UNSET
+          PROFESSIONAL
+          AMATEUR
+          MINOR
+          MAJOR
+          INTERNATIONAL
+          DPC_QUALIFIER
+          DPC_LEAGUE_QUALIFIER
+          DPC_LEAGUE
+          DPC_LEAGUE_FINALS
+        ]
         isCompleted: false
       }
     ) {

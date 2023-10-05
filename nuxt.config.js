@@ -56,7 +56,7 @@ export default {
       {
         default: true,
         name: 'WebSocketBackend',
-        url: 'http://localhost:5000',
+        url: 'https://dota-webservice.onrender.com/',
       },
     ],
     server: {
@@ -65,7 +65,7 @@ export default {
         credentials: true,
         origin: [
           // whitelisted origins
-          'http://localhost:5000',
+          'https://dota-webservice.onrender.com/',
         ],
       },
     },
@@ -88,6 +88,18 @@ export default {
   },
   router: {
     middleware: ['set-cookie'],
+    routes: [
+      {
+        name: 'index',
+        path: '/',
+        component: '~/pages/index.vue',
+      },
+      {
+        name: 'historyMatches',
+        path: '/history',
+        component: '~/pages/historyMatches.vue',
+      },
+    ],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

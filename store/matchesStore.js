@@ -4,6 +4,20 @@ export const state = () => ({
       matchid: 7321123920,
     },
   ],
+  historyMatches: [
+    {
+      match_id: 7365453191,
+      didradiantwin_pred: true,
+      didradiantwin_proba: 0.7,
+      diddirewin_proba: 0.3,
+    },
+    {
+      match_id: 7365453192,
+      didradiantwin_pred: false,
+      didradiantwin_proba: 0.4,
+      diddirewin_proba: 0.6,
+    },
+  ],
   testTick: 0,
 })
 

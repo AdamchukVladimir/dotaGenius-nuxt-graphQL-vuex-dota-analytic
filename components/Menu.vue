@@ -5,9 +5,9 @@
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item">
+            <NuxtLink class="navbar-item" to="/">
               <img src="~/assets/img/death_prophet_white.png" alt="Logo" />
-            </a>
+            </NuxtLink>
             <span class="navbar-burger" data-target="navbarMenuHeroA">
               <span></span>
               <span></span>
@@ -16,9 +16,19 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
-              <nuxt-link class="navbar-item is-active" to="/">Live</nuxt-link>
+              <NuxtLink
+                to="/"
+                class="navbar-item"
+                :class="{ 'is-active': $route.path === '/' }"
+                >Live</NuxtLink
+              >
 
-              <nuxt-link class="navbar-item" to="/history">History</nuxt-link>
+              <NuxtLink
+                to="/history"
+                class="navbar-item"
+                :class="{ 'is-active': $route.path === '/history' }"
+                >History</NuxtLink
+              >
             </div>
           </div>
         </div>

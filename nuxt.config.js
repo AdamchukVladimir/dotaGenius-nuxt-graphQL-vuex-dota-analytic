@@ -32,6 +32,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  target: 'static',
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['@nuxtjs/fontawesome'],
@@ -88,18 +89,6 @@ export default {
   },
   router: {
     middleware: ['set-cookie'],
-    routes: [
-      {
-        name: 'index',
-        path: '/',
-        component: '~/pages/index.vue',
-      },
-      {
-        name: 'historyMatches',
-        path: '/history',
-        component: '~/pages/historyMatches.vue',
-      },
-    ],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

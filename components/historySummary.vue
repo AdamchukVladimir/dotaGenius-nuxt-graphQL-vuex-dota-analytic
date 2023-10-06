@@ -4,7 +4,7 @@
       <div class="tile is-ancestor">
         <div class="tile is-2 is-parent">
           <div class="tile is-child box">
-            <span title="Match ID">ID: 432423</span>
+            <span title="Match ID">ID: {{ historyMatch }}</span>
           </div>
         </div>
       </div>

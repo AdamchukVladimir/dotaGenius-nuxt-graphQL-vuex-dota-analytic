@@ -3,20 +3,15 @@
     <div class="historyMatchInfoTech">
       <div class="tile is-ancestor">
         <div class="matchID tile is-2 is-parent">
-          <div class="tile is-child box">
+          <div class="tile is-child top_info box">
             <span title="Match ID">ID: {{ historyMatch.matchId }}</span>
           </div>
         </div>
-        <div class="tile is-2 is-parent">
-          <div class="tile is-child box">
-            <span> testest</span>
-          </div>
-        </div>
-        <div class="score tile is-4 is-parent">
-          <div class="tile is-child box">
-            <div class="columns">
-              <div class="column is-4" title="Game Time">
-                <figure class="image is-16x16">
+        <div class="tile is-3 is-parent">
+          <div class="tile is-child top_info box">
+            <div class="columns is-gapless">
+              <div class="column is-1">
+                <figure class="image is-24x24">
                   <img
                     src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
                     alt="player.hero.displayName"
@@ -24,58 +19,129 @@
                   />
                 </figure>
               </div>
-              <div class="column is-2 hotpadding">
-                <figure class="image is-square is-32x32">
+              <div class="column is-1">
+                <figure class="image is-24x24">
                   <img
-                    class="is-rounded"
-                    v-if="historyMatch.radiantTeam"
-                    v-bind:src="historyMatch.radiantTeam.logo"
-                    :alt="historyMatch.radiantTeam.name"
-                    :title="historyMatch.radiantTeam.name"
-                  />
-                  <img
-                    class="is-rounded"
-                    v-else
-                    src="~/assets/img/radiant_square.png"
-                    alt="Radiant image"
-                    title="Radiant"
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
                   />
                 </figure>
               </div>
-              <div class="column is-2 line_info hotpadding">
-                <span title="Game Score"
-                  >{{ historyMatch.radiantScore }}:{{
-                    historyMatch.direScore
-                  }}</span
-                >
-              </div>
-              <div class="column is-2">
-                <figure class="image is-square is-32x32">
+              <div class="column is-1">
+                <figure class="image is-24x24">
                   <img
-                    class="is-rounded"
-                    v-if="historyMatch.direTeam"
-                    v-bind:src="historyMatch.direTeam.logo"
-                    :alt="historyhistoryMatch.direTeam.name"
-                    :title="historyMatch.direTeam.name"
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
                   />
+                </figure>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-6">
+                <article class="media-right">
+                  <span>NAVI</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="score tile is-2 is-parent">
+          <div class="tile is-child top_info box">
+            <div class="columns">
+              <div class="column is-4">
+                <figure class="image is-24x24">
                   <img
                     class="is-rounded"
-                    v-else
-                    src="~/assets/img/dire_square.png"
-                    alt="Dire image"
-                    title="Dire"
+                    src="http://localhost:3000/_nuxt/assets/img/radiant_square.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-4"><span>22:14</span></div>
+              <div class="column is-4">
+                <figure class="image is-24x24">
+                  <img
+                    class="is-rounded"
+                    src="http://localhost:3000/_nuxt/assets/img/dire_square.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
                   />
                 </figure>
               </div>
             </div>
           </div>
         </div>
-        <div class="insight_Probability tile is-2 is-parent">
-          <div
-            class="tile is-child top_info box"
-            title="Probability Of Winning"
-          >
-            <span>Dire 69%</span>
+        <div class="tile is-3 is-parent">
+          <div class="tile is-child top_info box" title="Second team">
+            <div class="columns is-gapless">
+              <div class="column is-6">
+                <span>Liquid</span>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+              <div class="column is-1">
+                <figure class="image is-24x24">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="insight_Coef tile is-2 is-parent">
@@ -83,8 +149,8 @@
             class="tile is-child top_info box"
             title="Calculated Coefficient"
           >
-            <span>Coef:</span>
-            <span>1.36 / 2.98</span>
+            <span>Navi:</span>
+            <span>72%</span>
           </div>
         </div>
       </div>

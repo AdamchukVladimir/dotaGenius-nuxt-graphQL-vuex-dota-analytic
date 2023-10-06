@@ -32,7 +32,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  target: 'static',
+  target: 'server',
   ssr: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -40,6 +40,10 @@ export default {
   fontawesome: {
     icons: {
       solid: true,
+      server: {
+        port: 10000,
+        host: process.env.NODE_ENV === `production` ? `0.0.0.0` : `localhost`,
+      },
       regular: [],
     },
   },

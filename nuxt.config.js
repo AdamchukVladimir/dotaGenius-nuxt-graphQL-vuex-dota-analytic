@@ -32,12 +32,12 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  target: 'server',
+  target: 'static',
   ssr: true,
-  server: {
-    port: 10000,
-    host: process.env.NODE_ENV === `production` ? `0.0.0.0` : `localhost`,
-  },
+  // server: {
+  //   port: 10000,
+  //   host: process.env.NODE_ENV === `production` ? `0.0.0.0` : `localhost`,
+  // },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['@nuxtjs/fontawesome'],

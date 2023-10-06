@@ -16,10 +16,13 @@
           <div class="tile is-child box">
             <div class="columns">
               <div class="column is-4" title="Game Time">
-                <span class="icon">
-                  <font-awesome-icon icon="fa-solid fa-clock" />
-                </span>
-                10:00
+                <figure class="image is-16x16">
+                  <img
+                    src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                    alt="player.hero.displayName"
+                    title="player.hero.displayName"
+                  />
+                </figure>
               </div>
               <div class="column is-2 hotpadding">
                 <figure class="image is-square is-32x32">

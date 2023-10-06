@@ -14,57 +14,55 @@
         </div>
         <div class="score tile is-4 is-parent">
           <div class="tile is-child box">
-            <div class="media">
-              <div class="columns">
-                <div class="column is-4" title="Game Time">
-                  <span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-clock" />
-                  </span>
-                  10:00
-                </div>
-                <div class="column is-2 hotpadding">
-                  <figure class="image is-square is-32x32">
-                    <img
-                      class="is-rounded"
-                      v-if="historyMatch.radiantTeam"
-                      v-bind:src="historyMatch.radiantTeam.logo"
-                      :alt="historyMatch.radiantTeam.name"
-                      :title="historyMatch.radiantTeam.name"
-                    />
-                    <img
-                      class="is-rounded"
-                      v-else
-                      src="~/assets/img/radiant_square.png"
-                      alt="Radiant image"
-                      title="Radiant"
-                    />
-                  </figure>
-                </div>
-                <div class="column is-2 line_info hotpadding">
-                  <span title="Game Score"
-                    >{{ historyMatch.radiantScore }}:{{
-                      historyMatch.direScore
-                    }}</span
-                  >
-                </div>
-                <div class="column is-2">
-                  <figure class="image is-square is-32x32">
-                    <img
-                      class="is-rounded"
-                      v-if="historyMatch.direTeam"
-                      v-bind:src="historyMatch.direTeam.logo"
-                      :alt="historyhistoryMatch.direTeam.name"
-                      :title="historyMatch.direTeam.name"
-                    />
-                    <img
-                      class="is-rounded"
-                      v-else
-                      src="~/assets/img/dire_square.png"
-                      alt="Dire image"
-                      title="Dire"
-                    />
-                  </figure>
-                </div>
+            <div class="columns">
+              <div class="column is-4" title="Game Time">
+                <span class="icon">
+                  <font-awesome-icon icon="fa-solid fa-clock" />
+                </span>
+                10:00
+              </div>
+              <div class="column is-2 hotpadding">
+                <figure class="image is-square is-32x32">
+                  <img
+                    class="is-rounded"
+                    v-if="historyMatch.radiantTeam"
+                    v-bind:src="historyMatch.radiantTeam.logo"
+                    :alt="historyMatch.radiantTeam.name"
+                    :title="historyMatch.radiantTeam.name"
+                  />
+                  <img
+                    class="is-rounded"
+                    v-else
+                    src="~/assets/img/radiant_square.png"
+                    alt="Radiant image"
+                    title="Radiant"
+                  />
+                </figure>
+              </div>
+              <div class="column is-2 line_info hotpadding">
+                <span title="Game Score"
+                  >{{ historyMatch.radiantScore }}:{{
+                    historyMatch.direScore
+                  }}</span
+                >
+              </div>
+              <div class="column is-2">
+                <figure class="image is-square is-32x32">
+                  <img
+                    class="is-rounded"
+                    v-if="historyMatch.direTeam"
+                    v-bind:src="historyMatch.direTeam.logo"
+                    :alt="historyhistoryMatch.direTeam.name"
+                    :title="historyMatch.direTeam.name"
+                  />
+                  <img
+                    class="is-rounded"
+                    v-else
+                    src="~/assets/img/dire_square.png"
+                    alt="Dire image"
+                    title="Dire"
+                  />
+                </figure>
               </div>
             </div>
           </div>

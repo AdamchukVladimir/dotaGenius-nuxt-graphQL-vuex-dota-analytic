@@ -34,16 +34,16 @@ export default {
   components: true,
   target: 'server',
   ssr: true,
+  server: {
+    port: 10000,
+    host: process.env.NODE_ENV === `production` ? `0.0.0.0` : `localhost`,
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['@nuxtjs/fontawesome'],
   fontawesome: {
     icons: {
       solid: true,
-      server: {
-        port: 10000,
-        host: process.env.NODE_ENV === `production` ? `0.0.0.0` : `localhost`,
-      },
       regular: [],
     },
   },

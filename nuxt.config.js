@@ -94,18 +94,7 @@ export default {
   },
   router: {
     middleware: ['set-cookie'],
-    routes: [
-      {
-        name: 'index',
-        path: '/',
-        component: '~/pages/index.vue',
-      },
-      {
-        name: 'history',
-        path: '/history',
-        component: '~/pages/history.vue',
-      },
-    ],
+    routes: [],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

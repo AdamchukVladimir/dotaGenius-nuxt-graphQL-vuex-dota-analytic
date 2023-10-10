@@ -6,6 +6,12 @@
       :key="historyMatch.matchId"
     >
       <historySummary :historyMatch="historyMatch" />
+      <NuxtLink
+        :to="{
+          path: `/match/${historyMatch.matchId}`,
+        }"
+        >{{ historyMatch.matchId }}</NuxtLink
+      >
     </li>
   </div>
 </template>

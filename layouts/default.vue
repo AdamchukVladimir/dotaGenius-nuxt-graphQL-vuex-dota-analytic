@@ -21,9 +21,12 @@ export default {
     })
 
     //this.socket.on('tick', (tickId) => {
-    this.socket.on('matches_predict', (tickId) => {
-      console.log('latestTickId ' + tickId)
-      //this.$store.commit('matchesStore/updateTick', tickId)
+    // this.socket.on('matches_predict', (tickId) => {
+    //   console.log('matches_predict socket ' + tickId)
+    //   //this.$store.commit('matchesStore/updateTick', tickId)
+    // })
+    this.socket.on('matches_predict', (matches_predict) => {
+      console.log('matches_predict socket ' + matches_predict)
     })
   },
   //end socket.io

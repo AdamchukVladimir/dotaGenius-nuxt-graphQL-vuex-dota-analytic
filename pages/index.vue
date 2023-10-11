@@ -1,7 +1,13 @@
 <template>
   <div class="matches container">
     <li class="section box" v-for="match in matchesState" :key="match.matchId">
-      <matchSummary :match="match" />
+      <NuxtLink
+        :to="{
+          path: `/matches/live/${match.matchId}`,
+        }"
+      >
+        <matchSummary :match="match" />
+      </NuxtLink>
     </li>
   </div>
 </template>

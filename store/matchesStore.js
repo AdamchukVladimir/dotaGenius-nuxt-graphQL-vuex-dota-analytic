@@ -1,7 +1,7 @@
 export const state = () => ({
   matches: [
     {
-      matchid: 7321123920,
+      matchId: 7321123920,
     },
   ],
   historyMatches: [

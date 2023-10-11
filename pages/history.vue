@@ -5,13 +5,13 @@
       v-for="historyMatch in historyMatchesState"
       :key="historyMatch.matchId"
     >
-      <historySummary :historyMatch="historyMatch" />
       <NuxtLink
         :to="{
-          path: `/match/${historyMatch.matchId}`,
+          path: `/matches/${historyMatch.matchId}`,
         }"
-        >{{ historyMatch.matchId }}</NuxtLink
       >
+        <historySummary :historyMatch="historyMatch" />
+      </NuxtLink>
     </li>
   </div>
 </template>

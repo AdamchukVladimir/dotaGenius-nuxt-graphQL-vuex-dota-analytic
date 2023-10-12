@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="match" class="container">
     <div class="hero matchInfoTech">
       <div class="tile is-ancestor">
         <div class="matchID tile is-2 is-parent">
@@ -100,7 +100,7 @@
       </div>
     </div>
     <div class="matchInfoTotal tile is-ancestor">
-      <div class="radiantHeroes tile is-4 is-parent is-vertical">
+      <div class="radiantHeroes tile is-6 is-parent is-vertical">
         <div
           class="radiant hero tile is-child has-background-primary-light box"
           v-for="player in match.players"
@@ -180,167 +180,8 @@
           </div>
         </div>
       </div>
-      <div class="teamsSummary tile is-4 is-parent is-vertical">
-        <div
-          class="radiant_team tile has-background-primary-light is-child box"
-        >
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-square is-48x48">
-                <img
-                  class="is-rounded"
-                  v-if="match.radiantTeam"
-                  v-bind:src="match.radiantTeam.logo"
-                  :alt="match.radiantTeam.name"
-                  :title="match.radiantTeam.name"
-                />
-                <img
-                  class="is-rounded"
-                  v-else
-                  src="~/assets/img/radiant_square.png"
-                  alt="Radiant image"
-                  title="Radiant"
-                />
-              </figure>
-            </div>
-            <div class="media-content">
-              <p v-if="match.radiantTeam" class="title is-4">
-                {{ match.radiantTeam.name }}
-              </p>
-              <p class="subtitle is-6">
-                <span title="Total Team Winrate"
-                  ><span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-ranking-star" />
-                  </span>
-                  52</span
-                >
-                <span title="Team Wintrate VS Opponent"
-                  ><span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-people-arrows" />
-                  </span>
-                  46</span
-                >
-              </p>
-            </div>
-          </div>
-          <table class="table has-background-primary-light">
-            <thead>
-              <tr>
-                <th>Winrate</th>
-                <th
-                  v-for="player in match.players"
-                  v-if="player.isRadiant == true"
-                >
-                  <figure class="image is-16x16">
-                    <img
-                      :src="getHeroIconUrl(player.hero.name)"
-                      :alt="player.hero.displayName"
-                      :title="player.hero.displayName"
-                    />
-                  </figure>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>With</th>
-                <td>1</td>
-                <td>38</td>
-                <td>23</td>
-                <td>12</td>
-                <td>68</td>
-              </tr>
-              <tr>
-                <th>Versus</th>
-                <td>2</td>
-                <td>38</td>
-                <td>20</td>
-                <td>11</td>
-                <td>7</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="dire_team tile has-background-danger-light is-child box">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-square is-48x48">
-                <img
-                  class="is-rounded"
-                  v-if="match.direTeam"
-                  v-bind:src="match.direTeam.logo"
-                  :alt="match.direTeam.name"
-                  :title="match.direTeam.name"
-                />
-                <img
-                  class="is-rounded"
-                  v-else
-                  src="~/assets/img/dire_square.png"
-                  alt="Dire image"
-                  title="Dire"
-                />
-              </figure>
-            </div>
-            <div class="media-content">
-              <p v-if="match.direTeam" class="title is-4">
-                {{ match.direTeam.name }}
-              </p>
-              <p class="subtitle is-6">
-                <span title="Total Team Winrate"
-                  ><span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-ranking-star" />
-                  </span>
-                  52</span
-                >
-                <span title="Team Winrate VS Opponent"
-                  ><span class="icon">
-                    <font-awesome-icon icon="fa-solid fa-people-arrows" />
-                  </span>
-                  46</span
-                >
-              </p>
-            </div>
-          </div>
-          <table class="table has-background-danger-light">
-            <thead>
-              <tr>
-                <th>Winrate</th>
-                <th
-                  v-for="player in match.players"
-                  v-if="player.isRadiant == false"
-                >
-                  <figure class="image is-16x16">
-                    <img
-                      :src="getHeroIconUrl(player.hero.name)"
-                      :alt="player.hero.displayName"
-                      :title="player.hero.displayName"
-                    />
-                  </figure>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>With</th>
-                <td>1</td>
-                <td>38</td>
-                <td>23</td>
-                <td>12</td>
-                <td>68</td>
-              </tr>
-              <tr>
-                <th>Versus</th>
-                <td>2</td>
-                <td>38</td>
-                <td>20</td>
-                <td>11</td>
-                <td>7</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="direHeroes tile is-4 is-parent is-vertical">
+
+      <div class="direHeroes tile is-6 is-parent is-vertical">
         <div
           class="dire hero tile is-child has-background-danger-light box"
           v-for="player in match.players"
@@ -421,10 +262,176 @@
         </div>
       </div>
     </div>
+    <div class="matchTeamInfo tile is-ancestor">
+      <div class="teamsSummaryRadiant tile is-6 is-parent">
+        <div
+          class="radiant_team tile has-background-primary-light is-child box"
+        >
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-square is-48x48">
+                <img
+                  class="is-rounded"
+                  v-if="match.radiantTeam"
+                  v-bind:src="match.radiantTeam.logo"
+                  :alt="match.radiantTeam.name"
+                  :title="match.radiantTeam.name"
+                />
+                <img
+                  class="is-rounded"
+                  v-else
+                  src="~/assets/img/radiant_square.png"
+                  alt="Radiant image"
+                  title="Radiant"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p v-if="match.radiantTeam" class="title is-4">
+                {{ match.radiantTeam.name }}
+              </p>
+              <p class="subtitle is-6">
+                <span title="Total Team Winrate"
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-ranking-star" />
+                  </span>
+                  52</span
+                >
+                <span title="Team Wintrate VS Opponent"
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-people-arrows" />
+                  </span>
+                  46</span
+                >
+              </p>
+            </div>
+          </div>
+          <table class="table has-background-primary-light">
+            <thead>
+              <tr>
+                <th>Winrate</th>
+                <th
+                  v-for="player in match.players"
+                  v-if="player.isRadiant == true"
+                >
+                  <figure class="image is-16x16">
+                    <img
+                      :src="getHeroIconUrl(player.hero.name)"
+                      :alt="player.hero.displayName"
+                      :title="player.hero.displayName"
+                    />
+                  </figure>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>With</th>
+                <td>1</td>
+                <td>38</td>
+                <td>23</td>
+                <td>12</td>
+                <td>68</td>
+              </tr>
+              <tr>
+                <th>Versus</th>
+                <td>2</td>
+                <td>38</td>
+                <td>20</td>
+                <td>11</td>
+                <td>7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="teamsSummaryDire tile is-6 is-parent">
+        <div class="dire_team tile has-background-danger-light is-child box">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-square is-48x48">
+                <img
+                  class="is-rounded"
+                  v-if="match.direTeam"
+                  v-bind:src="match.direTeam.logo"
+                  :alt="match.direTeam.name"
+                  :title="match.direTeam.name"
+                />
+                <img
+                  class="is-rounded"
+                  v-else
+                  src="~/assets/img/dire_square.png"
+                  alt="Dire image"
+                  title="Dire"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p v-if="match.direTeam" class="title is-4">
+                {{ match.direTeam.name }}
+              </p>
+              <p class="subtitle is-6">
+                <span title="Total Team Winrate"
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-ranking-star" />
+                  </span>
+                  52</span
+                >
+                <span title="Team Winrate VS Opponent"
+                  ><span class="icon">
+                    <font-awesome-icon icon="fa-solid fa-people-arrows" />
+                  </span>
+                  46</span
+                >
+              </p>
+            </div>
+          </div>
+          <table class="table has-background-danger-light">
+            <thead>
+              <tr>
+                <th>Winrate</th>
+                <th
+                  v-for="player in match.players"
+                  v-if="player.isRadiant == false"
+                >
+                  <figure class="image is-16x16">
+                    <img
+                      :src="getHeroIconUrl(player.hero.name)"
+                      :alt="player.hero.displayName"
+                      :title="player.hero.displayName"
+                    />
+                  </figure>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>With</th>
+                <td>1</td>
+                <td>38</td>
+                <td>23</td>
+                <td>12</td>
+                <td>68</td>
+              </tr>
+              <tr>
+                <th>Versus</th>
+                <td>2</td>
+                <td>38</td>
+                <td>20</td>
+                <td>11</td>
+                <td>7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   data() {
     return {
@@ -436,7 +443,13 @@ export default {
     console.log('route ' + JSON.stringify(this.$route.params))
   },
   computed: {
+    //Получаем данные матча из store, timeout нужен чтобы при перезагрузки страницы успели подтянуться данные в store
     match() {
+      setTimeout(() => {
+        return this.$store.state.matchesStore.matches.find(
+          (match) => match.matchId == this.$route.params.live
+        )
+      }, 2000)
       return this.$store.state.matchesStore.matches.find(
         (match) => match.matchId == this.$route.params.live
       )
@@ -449,6 +462,7 @@ export default {
     },
   },
   methods: {
+    ...mapMutations('matchesStore', ['setSortedPlayers']),
     formatTime(seconds) {
       //const seconds = this.match.gameTime
       const hours = Math.floor(seconds / 3600)

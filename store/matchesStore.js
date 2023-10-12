@@ -30,11 +30,35 @@ export const getters = {
 export const mutations = {
   updateMatches(state, MatchesObj) {
     state.matches = MatchesObj.data.live.matches
+
+    state.matches.forEach((match) => {
+      match.players.sort((a, b) => {
+        const positionA = parseInt(a.position?.slice(-1)) //Знак вопроса это защита на случай если position - null, чтобы не давало ошибку
+        const positionB = parseInt(b.position?.slice(-1)) //обработка этих ситуаций ниже
+
+        if (Number.isNaN(positionA) && Number.isNaN(positionB)) {
+          return 0
+        } else if (Number.isNaN(positionA) && !Number.isNaN(positionB)) {
+          return 1
+        } else if (!Number.isNaN(positionA) && Number.isNaN(positionB)) {
+          return -1
+        } else if (!Number.isNaN(positionA) && !Number.isNaN(positionB)) {
+          return positionA - positionB
+        }
+      })
+    })
     console.log('state.matches = ' + state.matches)
   },
   updateTick(state, Tick) {
     state.testTick = Tick
     console.log('state.testTick = ' + state.testTick)
+  },
+  setSortedPlayers(state, players) {
+    state.matches.forEach((match) => {
+      if (match.players) {
+        match.players = players
+      }
+    })
   },
 }
 

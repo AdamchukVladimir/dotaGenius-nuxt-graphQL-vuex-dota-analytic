@@ -426,6 +426,274 @@
         </div>
       </div>
     </div>
+    <div class="oldMatches tile is-ancestor">
+      <div class="tile is-2 is-parent">
+        <div class="tile is-child top_info has-background-primary-light box">
+          <div class="columns is-gapless">
+            <div class="column is-2"></div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="score tile is-2 is-parent">
+        <div class="tile is-child top_info has-background-primary-light box">
+          <div class="columns">
+            <div class="column is-4">
+              <figure class="image is-24x24">
+                <img
+                  class="is-rounded"
+                  src="http://localhost:3000/_nuxt/assets/img/radiant_square.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-4"><span>22:14</span></div>
+            <div class="column is-4">
+              <figure class="image is-24x24">
+                <img
+                  class="is-rounded"
+                  src="http://localhost:3000/_nuxt/assets/img/dire_square.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-2 is-parent">
+        <div
+          class="tile is-child top_info has-background-primary-light box"
+          title="Second team"
+        >
+          <div class="columns is-gapless">
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-2 is-parent">
+        <div class="tile is-child top_info has-background-danger-light box">
+          <div class="columns is-gapless">
+            <div class="column is-2"></div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="score tile is-2 is-parent">
+        <div class="tile is-child top_info has-background-danger-light box">
+          <div class="columns">
+            <div class="column is-4">
+              <figure class="image is-24x24">
+                <img
+                  class="is-rounded"
+                  src="http://localhost:3000/_nuxt/assets/img/radiant_square.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-4"><span>22:14</span></div>
+            <div class="column is-4">
+              <figure class="image is-24x24">
+                <img
+                  class="is-rounded"
+                  src="http://localhost:3000/_nuxt/assets/img/dire_square.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-2 is-parent">
+        <div
+          class="tile is-child top_info has-background-danger-light box"
+          title="Second team"
+        >
+          <div class="columns is-gapless">
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+            <div class="column is-2">
+              <figure class="image is-24x24">
+                <img
+                  src="https://cdn.stratz.com/images/dota2/heroes/skeleton_king_icon.png"
+                  alt="player.hero.displayName"
+                  title="player.hero.displayName"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -500,3 +768,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.oldPicture {
+  display: grid;
+  place-items: center;
+}
+</style>

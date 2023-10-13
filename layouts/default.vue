@@ -65,6 +65,15 @@ export default {
           console.log('Ответ от сервера:', response)
         }
       )
+      this.getMatchesBackEndInterval = setInterval(() => {
+        this.socket.emit(
+          'matches_predict',
+          { message: 'Hello nigga' },
+          (response) => {
+            console.log('Ответ от сервера:', response)
+          }
+        )
+      }, 20000)
     },
   },
 }

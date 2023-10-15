@@ -47,7 +47,6 @@ export const mutations = {
         }
       })
     })
-    console.log('state.matches = ' + state.matches)
   },
   updateTick(state, Tick) {
     state.testTick = Tick

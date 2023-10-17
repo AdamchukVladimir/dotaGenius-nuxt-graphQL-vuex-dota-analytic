@@ -22,9 +22,19 @@ export const state = () => ({
 })
 
 export const getters = {
-  // getCounter(state) {
-  //   return state.counter
-  // },
+  matchExists: (state) => (matchId) => {
+    console.log('getters matchExist ' + matchId)
+    // Проверяем, содержится ли номер матча в массиве historyMatches
+    console.log(
+      'getters matchExist search ' +
+        JSON.stringify(state.historyMatches[0].matchId)
+    )
+    return state.historyMatches.some((match) => match.matchId == matchId)
+  },
+  liveMatchExists: (state) => (matchId) => {
+    // Проверяем, содержится ли номер матча в массиве matches
+    return state.matches.some((match) => match.matchId == matchId)
+  },
 }
 
 export const mutations = {

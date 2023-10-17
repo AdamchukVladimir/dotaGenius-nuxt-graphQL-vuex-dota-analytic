@@ -1282,12 +1282,14 @@
 import { mapMutations } from 'vuex'
 
 export default {
+  middleware: 'liveAccess',
   data() {
     return {
       id: null, // Идентификатор матча
       matchData: null, // Данные матча
     }
   },
+
   mounted() {
     console.log('route ' + JSON.stringify(this.$route.params))
   },

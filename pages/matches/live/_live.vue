@@ -1276,12 +1276,17 @@
       </div>
     </div>
   </div>
+  <div v-else-if="historyMatch">
+    Test<historyMatch :historyMatch="historyMatch" />
+  </div>
+  <div v-else class="container">Match not found</div>
 </template>
 
 <script>
 import { mapMutations } from 'vuex'
 
 export default {
+  name: 'liveMatch',
   middleware: 'liveAccess',
   data() {
     return {
@@ -1302,6 +1307,16 @@ export default {
         )
       }, 2000)
       return this.$store.state.matchesStore.matches.find(
+        (match) => match.matchId == this.$route.params.live
+      )
+    },
+    historyMatch() {
+      setTimeout(() => {
+        return this.$store.state.matchesStore.historyMatches.find(
+          (match) => match.matchId == this.$route.params.live
+        )
+      }, 2000)
+      return this.$store.state.matchesStore.historyMatches.find(
         (match) => match.matchId == this.$route.params.live
       )
     },

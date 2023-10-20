@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: 'historyMatch',
   data() {
     return {
       id: null, // Идентификатор матча

@@ -20,6 +20,7 @@ export default {
     },
   },
   mounted() {
+    console.log('mounted deaful')
     //socket.io
     // use "main" socket defined in nuxt.config.js
     this.socket = this.$nuxtSocket({
@@ -27,6 +28,8 @@ export default {
     })
     this.socket.on('matches_predict', (matches_predict) => {
       console.log('matches_predict socket ' + matches_predict)
+      //console.log('this.$store.state.matchesStore.matches ')
+      //this.$store.commit('matchesStore/updateMatchesBackEnd', matches_predict)
     })
     this.getMatchesBackEnd()
     //end socket.io
@@ -41,7 +44,7 @@ export default {
     startRefetchInterval() {
       //Получаем данные при вызове (Нужно для первичного захода в mount)
       this.$apollo.query({ query: live }).then((data) => {
-        console.log(data)
+        console.log('matches stratz ' + data)
         this.$store.commit('matchesStore/updateMatches', data)
       })
       //Вешает Интервал, чтобы кидать запрос каждые 60 сек

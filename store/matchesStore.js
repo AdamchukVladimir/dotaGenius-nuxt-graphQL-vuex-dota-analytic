@@ -32,6 +32,7 @@ export const getters = {
     return state.historyMatches.some((match) => match.matchId == matchId)
   },
   liveMatchExists: (state) => (matchId) => {
+    console.log('getters live matchExist ' + matchId)
     // Проверяем, содержится ли номер матча в массиве matches
     return state.matches.some((match) => match.matchId == matchId)
   },
@@ -57,6 +58,10 @@ export const mutations = {
         }
       })
     })
+  },
+  updateMatchesBackEnd(state, MatchesObj) {
+    console.log('mutation updateMatchesBackEnd ' + MatchesObj[0])
+    //state.matches = MatchesObj
   },
   updateTick(state, Tick) {
     state.testTick = Tick

@@ -482,6 +482,11 @@ export default {
       return value
     },
   },
+  mounted() {
+    console.log(
+      'matches matchesSummary ' + this.$store.state.matchesStore.matches
+    )
+  },
   //     enemyClear() {
   //       console.log("enemyClear");
   //       var clearEnemyObject = {

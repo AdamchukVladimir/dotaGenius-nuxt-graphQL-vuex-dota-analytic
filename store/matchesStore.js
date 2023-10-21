@@ -60,8 +60,8 @@ export const mutations = {
     })
   },
   updateMatchesBackEnd(state, MatchesObj) {
-    console.log('mutation updateMatchesBackEnd ' + MatchesObj[0])
-    //state.matches = MatchesObj
+    console.log('mutation updateMatchesBackEnd ' + JSON.stringify(MatchesObj))
+    state.matches = MatchesObj.matches
   },
   updateTick(state, Tick) {
     state.testTick = Tick

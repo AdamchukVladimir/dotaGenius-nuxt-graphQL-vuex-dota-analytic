@@ -1277,9 +1277,37 @@
     </div>
   </div>
   <div v-else-if="historyMatch">
-    Test<historyMatch :historyMatch="historyMatch" />
+    <div class="container">
+      <article class="message is-info is-6">
+        <div class="message-header">
+          <p>Info</p>
+          <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+          The match is over. You can get more information by clicking on the
+          match card below.
+        </div>
+      </article>
+      <NuxtLink
+        :to="{
+          path: `/matches/${historyMatch.matchId}`,
+        }"
+      >
+        <historySummary :historyMatch="historyMatch" />
+      </NuxtLink>
+    </div>
   </div>
-  <div v-else class="container">Match not found</div>
+  <div v-else class="container">
+    <article class="message is-info is-6">
+      <div class="message-header">
+        <p>Info</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        Match not found. <NuxtLink to="/">Home</NuxtLink>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script>
@@ -1296,7 +1324,7 @@ export default {
   },
 
   mounted() {
-    console.log('route ' + JSON.stringify(this.$route.params))
+    console.log('route live ' + JSON.stringify(this.$route.params))
   },
   computed: {
     //Получаем данные матча из store, timeout нужен чтобы при перезагрузки страницы успели подтянуться данные в store

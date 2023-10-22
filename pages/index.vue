@@ -9,7 +9,6 @@
         <matchSummary :match="match" />
       </NuxtLink>
     </li>
-    {{ matchesState }}
   </div>
 </template>
 

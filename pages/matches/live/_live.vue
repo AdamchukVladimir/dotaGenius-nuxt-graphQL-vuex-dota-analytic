@@ -85,7 +85,33 @@
             class="tile is-child top_info box"
             title="Probability Of Winning"
           >
-            <span>Dire 69%</span>
+            <div v-if="match.match_info">
+              <div v-if="match.match_info.didradiantwin_pred == true">
+                <span
+                  >Radiant
+                  {{
+                    (match.match_info.didradiantwin_proba * 100).toFixed(1)
+                  }}%</span
+                >
+              </div>
+              <div v-else-if="match.match_info.didradiantwin_pred == false">
+                <span
+                  >Dire
+                  {{
+                    (match.match_info.diddirewin_proba * 100).toFixed(1)
+                  }}%</span
+                >
+              </div>
+            </div>
+            <div v-else>
+              <div v-if="netWorthCalculation >= 0">
+                <span>Radiant</span>
+              </div>
+              <div v-else-if="netWorthCalculation < 0">
+                <span>Dire</span>
+              </div>
+              <div v-else><span>Radiant</span></div>
+            </div>
           </div>
         </div>
         <div class="insight_Coef tile is-2 is-parent">
@@ -93,8 +119,24 @@
             class="tile is-child top_info box"
             title="Calculated Coefficient"
           >
-            <span>Coef:</span>
-            <span>1.36 / 2.98</span>
+            <div v-if="match.match_info">
+              <span>Coef:</span>
+              <span
+                >{{ (1 / match.match_info.didradiantwin_proba).toFixed(3) }} /
+                {{ (1 / match.match_info.diddirewin_proba).toFixed(3) }}</span
+              >
+            </div>
+            <div v-else>
+              <div v-if="netWorthCalculation >= 0">
+                <span class="icon"> <font-awesome-icon icon="coins" /> </span
+                ><span>+{{ netWorthCalculation }}</span>
+              </div>
+              <div v-else-if="netWorthCalculation < 0">
+                <span class="icon"> <font-awesome-icon icon="coins" /> </span
+                ><span>+{{ -netWorthCalculation }}</span>
+              </div>
+              <div v-else><span>0</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -169,7 +211,7 @@
               <span class="icon">
                 <font-awesome-icon icon="coins" />
               </span>
-              56743
+              {{ player.networth }}
             </div>
 
             <div
@@ -263,7 +305,7 @@
               <span class="icon">
                 <font-awesome-icon icon="coins" />
               </span>
-              56743
+              {{ player.networth }}
             </div>
 
             <div
@@ -1353,6 +1395,29 @@ export default {
     },
     formatDelayTime() {
       return this.formatTime(this.match.delay)
+    },
+    netWorthCalculation() {
+      if (this.match.players) {
+        const totalRadiantNetworth = this.match.players.reduce(
+          (sum, player) => {
+            if (player.isRadiant) {
+              return sum + player.networth
+            }
+            return sum
+          },
+          0
+        )
+
+        const totalDireNetworth = this.match.players.reduce((sum, player) => {
+          if (!player.isRadiant) {
+            // Использование отрицания (!) для условия isRadiant
+            return sum + player.networth
+          }
+          return sum
+        }, 0)
+
+        return totalRadiantNetworth - totalDireNetworth
+      }
     },
   },
   methods: {
